@@ -606,6 +606,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efc78eb235e979c4691ebcd5ec32ec0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Menu: {fileID: 1154055070}
+  Settings: {fileID: 670135033}
+  MenuGame1: {fileID: 1814691685}
+  MenuGame2: {fileID: 1635115761}
+  MenuGame3: {fileID: 318618053}
 --- !u!1 &335494299
 GameObject:
   m_ObjectHideFlags: 0
@@ -1309,6 +1314,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 707271958}
   - {fileID: 1169033743}
   - {fileID: 1886536754}
   - {fileID: 702983151}
@@ -1494,7 +1500,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 670135034}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1555,7 +1561,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1154055070}
+      - m_Target: {fileID: 1154055072}
+        m_MethodName: Back
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1359056645}
         m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
@@ -1601,6 +1618,79 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 702983150}
+  m_CullTransparentMesh: 0
+--- !u!1 &707271957
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 707271958}
+  - component: {fileID: 707271960}
+  - component: {fileID: 707271959}
+  m_Layer: 0
+  m_Name: Back
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &707271958
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 707271957}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 670135034}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 18.7, y: 1.7}
+  m_SizeDelta: {x: 1820.4688, y: 1046.7668}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &707271959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 707271957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: ee7cf4e4669313d4ab9efdd0c946fa30, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &707271960
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 707271957}
   m_CullTransparentMesh: 0
 --- !u!1 &718987565
 GameObject:
@@ -1705,7 +1795,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 670135034}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2665,7 +2755,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1814691685}
+      - m_Target: {fileID: 1359056645}
         m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
@@ -2679,6 +2769,17 @@ MonoBehaviour:
       - m_Target: {fileID: 670135033}
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1814691687}
+        m_MethodName: showSettingFromGame1
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2804,7 +2905,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1635115761}
+      - m_Target: {fileID: 1359056645}
         m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
@@ -2818,6 +2919,17 @@ MonoBehaviour:
       - m_Target: {fileID: 670135033}
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1635115763}
+        m_MethodName: showSettingFromGame2
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3017,6 +3129,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efc78eb235e979c4691ebcd5ec32ec0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Menu: {fileID: 1154055070}
+  Settings: {fileID: 670135033}
+  MenuGame1: {fileID: 1814691685}
+  MenuGame2: {fileID: 1635115761}
+  MenuGame3: {fileID: 318618053}
 --- !u!1 &1169033742
 GameObject:
   m_ObjectHideFlags: 0
@@ -3047,7 +3164,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 670135034}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -3385,7 +3502,7 @@ GameObject:
   - component: {fileID: 1359056648}
   - component: {fileID: 1359056647}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4090,6 +4207,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1154055072}
+        m_MethodName: showSettingFromMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1610865830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4180,6 +4308,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efc78eb235e979c4691ebcd5ec32ec0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Menu: {fileID: 1154055070}
+  Settings: {fileID: 670135033}
+  MenuGame1: {fileID: 1814691685}
+  MenuGame2: {fileID: 1635115761}
+  MenuGame3: {fileID: 318618053}
 --- !u!1 &1643432843
 GameObject:
   m_ObjectHideFlags: 0
@@ -4774,7 +4907,7 @@ GameObject:
   m_Layer: 0
   m_Name: MenuGame1
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -4815,6 +4948,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efc78eb235e979c4691ebcd5ec32ec0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Menu: {fileID: 1154055070}
+  Settings: {fileID: 670135033}
+  MenuGame1: {fileID: 1814691685}
+  MenuGame2: {fileID: 1635115761}
+  MenuGame3: {fileID: 318618053}
 --- !u!1 &1828525436
 GameObject:
   m_ObjectHideFlags: 0
@@ -4845,7 +4983,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 670135034}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4969,7 +5107,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 318618053}
+      - m_Target: {fileID: 1359056645}
         m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
@@ -4983,6 +5121,17 @@ MonoBehaviour:
       - m_Target: {fileID: 670135033}
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 318618055}
+        m_MethodName: showSettingFromGame3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5057,7 +5206,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 670135034}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
