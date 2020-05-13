@@ -21,6 +21,7 @@ public class LevelLoader : MonoBehaviour
     {
         if(scoreBoards[indexCurrentLevel].score == maxScore)
         {
+            Handheld.Vibrate();
             loadNextLevel();
         }
     }
