@@ -10,15 +10,16 @@ public class CheckPoint : MonoBehaviour
     public Transform attackPoint;
     public Transform metaPoint;
     public float attackRange = 0.5f;
+    public Transform halo;
     public LayerMask playerLayers;
     public Rigidbody2D[] playerList;
-    
-    public float tork=2f;
-    
+
+    public float tork = 2f;
+
     private GameObject uno;
     private float blackHoleForce;
     private float angle = 360f;
-    private bool angleDefined = false;
+    //private bool angleDefined = false;
     void Start()
     {
         blackHoleForce = attackRange;
@@ -30,10 +31,11 @@ public class CheckPoint : MonoBehaviour
     void Update()
     {
         checkcheckAround();
-        //addTorke();
+        halo.localScale = new Vector2(attackRange, attackRange);
+
     }
 
-
+   
     void addTorke()
     {
         float turn = 1f;
@@ -53,6 +55,7 @@ public class CheckPoint : MonoBehaviour
         foreach(Collider2D player in closePlayers)
         {
             attract();
+            
         }
     }
 
@@ -70,9 +73,10 @@ public class CheckPoint : MonoBehaviour
             float playerPosY = playerList[i].position.y;
             if (playerPosX > negativeRangeX && playerPosX < positiveRangeX && playerPosY > positiveRangeY && playerPosY < negativeRangeY)
             {
-                playerList[i].velocity = new Vector3(0, 0, 0);
+                //playerList[i].velocity = new Vector3(0, 0, 0);
                 playerList[i].gravityScale = 0;
-
+                
+                /*
                 if (angleDefined == false)
                 {
                     angleDefined = true;
@@ -80,7 +84,7 @@ public class CheckPoint : MonoBehaviour
                     
                 }
 
-                changeDirection(playerList[i]);
+                changeDirection(playerList[i]);*/
             }
         }
     }
@@ -124,8 +128,6 @@ public class CheckPoint : MonoBehaviour
 
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
-
-
 
     private void defineAngle(Rigidbody2D player)
     {
