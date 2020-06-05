@@ -81,22 +81,10 @@ public class LinearGravity : MonoBehaviour
 
     private void applyLinearGravity()
     {
-        if (checkSpecificObject)
-        {
-            attractSpecific();
-        }
-        if (checkObjectsList)
-        {
-            attractObjectList();
-        }
-        if (checkInRange)
-        {
-            attractInrange();
-        }
-        if (checkAll)
-        {
-            attractAll();
-        }
+        if (checkSpecificObject) attractSpecific();
+        if (checkObjectsList) attractObjectList();
+        if (checkInRange) attractInrange();
+        if (checkAll) attractAll();
     }
 
 
@@ -125,7 +113,8 @@ public class LinearGravity : MonoBehaviour
     }
 
 
-    
+
+
 
     private void onBegin()
     {
@@ -240,8 +229,6 @@ public class LinearGravity : MonoBehaviour
             Gizmos.color = new Color(2, 2, 2, 0.5f);
             Gizmos.DrawWireCube(AttractorTransform.position, new Vector3(AttractorTransform.localScale.x + objectDetectionRangeX, AttractorTransform.localScale.y + objectDetectionRangeY, 0));
 
-            
-
             if (haloTransform != null)
             {
                 float propX = AttractorTransform.localScale.x * proportionXAxis / 100;
@@ -249,9 +236,7 @@ public class LinearGravity : MonoBehaviour
                 haloTransform.position = AttractorTransform.position;
                 haloTransform.localScale = new Vector2(propX + objectDetectionRangeX, propY + objectDetectionRangeY);
             }
-
         }
-        
     }
 
 

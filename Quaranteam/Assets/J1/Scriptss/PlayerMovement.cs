@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D playerRigidBody2D;
     public Rigidbody2D hookRigidBody2D;
     public SpringJoint2D elasticCord;
-
+    public bool disableColliderAfterLaunch = false;
     public LineRenderer line;
 
     [Header("Color del elástico")]
@@ -44,6 +44,7 @@ public class PlayerMovement : MonoBehaviour
         if (itsGrabbed)
         {
             playerRigidBody2D.position = Camera.main.ScreenToWorldPoint(Input.mousePosition); //Con esto la pelota sigue el movimiento del mouse.
+            
         }
 
         //if (wasNotThrown) //En caso de necesitar controlar que se tire la pelota solo una vez. Por defecto solo se puede tirar una vez.

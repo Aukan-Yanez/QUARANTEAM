@@ -50,17 +50,22 @@ public class DamageMechanics : MonoBehaviour
     private bool gaveAPoint = false;
     private bool rotable = false;
     private float rotationForce = 0f;
+    private float spinDamage = 0f;
     private bool burnable = false;
     private float burningDamage = 0f;
+    private float burningRadius = 0f;
     private bool explode = false;
     private float explotionDamage = 30f;
     private bool freezable = false;
     private float freezingTime = 0f;
-    private float freezeDamagePercent = 0f;
+    private float initialDamagePercentage = 0f;
     private float freezeDamage = 0;
 
-
-
+    private Fire firep;
+    private Ice icep;
+    private Bomb bomb;
+    private Spin spin;
+    private Kirby kirby;
 
     private void Start()
     {
@@ -87,52 +92,38 @@ public class DamageMechanics : MonoBehaviour
                 applyEnemysEffect(proyectiles[i]);
             }
         }
-
         checkPermanentEfects();
     }
 
 
-
-    /*private Projectile[] enemiesAttacking()
-    {
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(objectTransform.position, radius, layerMask);
-        Projectile[] proyectiles = GameObject.FindObjectsOfType<Projectile>();
-        Projectile[] atacando = new Projectile[proyectiles.Length];
-
-        foreach (Collider2D collider in colliders)
-        {
-            if (!collider.Equals(objectCollider2D))
-            {
-                for (int i = 0; i < proyectiles.Length; i++)
-                {
-                    if (proyectiles[i].name == collider.name)
-                    {
-                        if (proyectiles[i].isActive)
-                        {
-                            atacando[i] = proyectiles[i];
-                        }
-                    }
-                }
-            }
-        }
-        return atacando;
-    }*/
+    
 
     private void applyEnemysEffect(Projectile enemy)
     {
-        if (enemy.canBurn) { fire(enemy); }
-        if (enemy.canFreeze) { ice(enemy); }
-        if (enemy.canExplode) { explotion(enemy); }
-        if (enemy.canElectrocute) { electri(); }
         if (enemy.canRemoveGravity) { ungravity(); }
-        if (enemy.canRotate) { rotate(enemy); }
+        if (enemy.fire.enable) { fire(enemy); }
+        if (enemy.ice.enable) { ice(enemy); }
+        if (enemy.bomb.enable) { explotion(enemy); }
+        if (enemy.spin.enable) { rotate(enemy); }
+        if (enemy.kirby.enable) { swallow(enemy); }
+    }
+
+    private void swallow(Projectile enemy)
+    {
+        kirby = enemy.kirby;
+        //attract(objectRigidbody2D, kirby.kirbyRigidbody, kirby.kirbySwallowPower, kirby.kirbyMass);
+        if (kirby.kirbyRigidbody.IsTouching(objectCollider2D))
+        {
+            health -= kirby.damage;
+        }
+        
     }
 
 
 
     private void explotion(Projectile enemy)
     {
-        float magnitud = Random.Range(enemy.explotionForceMin, enemy.explotionForceMax);
+        float magnitud = Random.Range(enemy.bomb.explotionForceMin, enemy.bomb.explotionForceMax);
         float x = Random.Range(-5, 5);
         float y = Random.Range(-5, 5);
 
@@ -142,7 +133,7 @@ public class DamageMechanics : MonoBehaviour
         objectRigidbody2D.AddTorque(magnitud / 2);
 
         explode = true;
-        explotionDamage = enemy.explotionDamage;
+        explotionDamage = enemy.bomb.explotionDamage;
         health -= explotionDamage;
         Debug.Log("Explóto!..");
     }
@@ -151,28 +142,28 @@ public class DamageMechanics : MonoBehaviour
     private void fire(Projectile enemy) 
     {
         burnable = true;
-        burningDamage = enemy.burningDamage;
+        burningDamage = enemy.fire.burningDamage;
+        burningRadius = enemy.fire.burningRadius;
         health -= 1;
-        Debug.Log("Me Quemoo!..");
+        Debug.Log(this.name + ": Me Quemoo!..");
     }
 
     //El elemento congelado debe congelar a los elementos que este tocando volviendolos "más fragiles"
     private void ice(Projectile enemy) 
     {
-        freezable = true;
-        freezeDamagePercent = enemy.freezeDamagePercent;
-        freezeDamage = enemy.freezeDamage;
-        freezingTime = enemy.freezingTime;
-        ungravity();
-        freezingTime -= 1;
-        health -= freezeDamagePercent*health/100;
+        if (freezable==false)
+        {
+            freezable = true;
+            initialDamagePercentage = enemy.ice.initialDamagePercentage;
+            freezeDamage = enemy.ice.freezeDamage;
+            freezingTime = enemy.ice.freezingTime;
+            ungravity();
+            freezingTime -= 1;
+            health -= initialDamagePercentage * health / 100;
+        }
     }
 
 
-    private void electri()
-    {
-
-    }
 
 
 
@@ -185,10 +176,26 @@ public class DamageMechanics : MonoBehaviour
 
     private void rotate(Projectile enemy)
     {
-        objectRigidbody2D.AddTorque(enemy.rotationForce);
+        objectRigidbody2D.AddTorque(enemy.spin.rotationForce);
         rotable = true;
-        rotationForce = enemy.rotationForce;
-        health -= 1;
+        rotationForce = enemy.spin.rotationForce;
+        spinDamage = enemy.spin.spinDamage;
+        if (enemy.spin.randomSpin)
+        {
+            int side = Random.Range(-5, 6);
+            if (side > 0)
+            {
+                rotationForce = -rotationForce;
+            }
+        }
+        else
+        {
+            if (enemy.spin.rightSpin)
+            {
+                rotationForce = -rotationForce;
+            }
+        }
+        health -= spinDamage;
         Debug.Log("Me Girann!..");
     }
 
@@ -200,11 +207,13 @@ public class DamageMechanics : MonoBehaviour
         if (rotable && health>-1) 
         { 
             objectRigidbody2D.AddTorque(rotationForce);
-            health -= 1;
+            health -= spinDamage;
         }
         if(burnable && health > -1) 
         {
-            health -= burningDamage; 
+            health -= burningDamage;
+            GameObject.Find(objectRigidbody2D.name).GetComponent<SpriteRenderer>().color = new Color(255,100,0);
+            burnsAreaAround();
         }
         if (explode && health > -1)
         {
@@ -217,11 +226,11 @@ public class DamageMechanics : MonoBehaviour
             {
                 if(objectRigidbody2D.rotation > 0)
                 {
-                    objectRigidbody2D.AddTorque(2);
+                    objectRigidbody2D.AddTorque(rotationForce);
                 }
                 else
                 {
-                    objectRigidbody2D.AddTorque(-2);
+                    objectRigidbody2D.AddTorque(-rotationForce);
                 }
             }
             else
@@ -235,6 +244,13 @@ public class DamageMechanics : MonoBehaviour
             freezingTime -= 1;
             health -= freezeDamage;
         }
+        if (kirby!=null && kirby.enable)
+        {
+            if (kirby.kirbyRigidbody.IsTouching(objectCollider2D))
+            {
+                health -= kirby.damage;
+            }
+        }
     }
 
 
@@ -244,6 +260,7 @@ public class DamageMechanics : MonoBehaviour
         {
             GameObject.Find(objectRigidbody2D.name).GetComponent<SpriteRenderer>().enabled = false;
             objectCollider2D.enabled = false;
+
             giveScore();
         }
     }
@@ -260,10 +277,7 @@ public class DamageMechanics : MonoBehaviour
         }
     }
 
-    /*private void OnDrawGizmosSelected()
-    {
-        Gizmos.DrawWireSphere(objectTransform.position, radius);
-    }*/
+    
 
     private Projectile[] detectProjectils()
     {
@@ -294,4 +308,82 @@ public class DamageMechanics : MonoBehaviour
             health = -1;
         }
     }
+
+
+
+    private void attract(Rigidbody2D objToAttract, Rigidbody2D own, float swall, float mass)
+    {
+        Rigidbody2D rbToAttract = objToAttract;
+
+        Vector3 direction = own.position - rbToAttract.position;
+
+        float distance = direction.magnitude;
+
+        float forceMagnitude = swall * (mass * rbToAttract.mass) / Mathf.Pow(distance, 2);
+
+        Vector3 force = direction.normalized * forceMagnitude;
+
+        rbToAttract.AddForce(force);
+    }
+
+
+
+
+
+
+
+    
+
+
+    private void OnDrawGizmos()
+    {
+        if (objectTransform == null)
+        {
+            return;
+        }
+        if (burnable)
+        {
+            //Gizmos.DrawWireSphere(objectTransform.position, burningRadius);
+            //Gizmos.color = new Color(255, 0,0, 0.3f);
+            //Gizmos.DrawSphere(objectTransform.position, burningRadius);
+        }
+        if (explode)
+        {
+            //Se debe dibujar un angulo, arco o semicircunferencia que representen los angulos de salida 
+            //de los proyectiles al explotar.
+        }
+
+    }
+
+
+    private void burnsAreaAround()
+    {
+        Collider2D[] arround = Physics2D.OverlapCircleAll(objectTransform.position, burningRadius, layerMask);
+        GameObject[] someone = GameObject.FindObjectsOfType<GameObject>();
+        
+
+
+        foreach(Collider2D enemy in arround)
+        {
+            if (enemy != objectCollider2D)
+            {
+                for (int i = 0; i < someone.Length; i++)
+                {
+                    if (someone[i].GetComponent<DamageMechanics>() != null)
+                    {
+                        if (someone[i].GetComponent<DamageMechanics>().name == enemy.name)
+                        {
+                            //Debug.Log("Quemando tambien a: " + someone[i].GetComponent<DamageMechanics>().name);
+                            someone[i].GetComponent<DamageMechanics>().health -= burningDamage * 0.9f;
+                            someone[i].GetComponent<SpriteRenderer>().color = new Color(255, 128, 0);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+
+
 }
