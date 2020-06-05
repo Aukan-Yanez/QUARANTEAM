@@ -166,7 +166,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointsToWin: 1
   nextSceneIndex: 2
-  delayTime: 81
+  delayTime: 169
 --- !u!1 &92459810
 GameObject:
   m_ObjectHideFlags: 0
@@ -278,6 +278,7 @@ GameObject:
   - component: {fileID: 166514269}
   - component: {fileID: 166514268}
   - component: {fileID: 166514267}
+  - component: {fileID: 166514271}
   m_Layer: 0
   m_Name: cajamadera (3)
   m_TagString: Untagged
@@ -371,6 +372,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   killMySelf: 0
+  seconds: 1
 --- !u!212 &166514270
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -421,6 +423,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &166514271
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 166514265}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b9c8e7cb31dee14408e124fce499d32c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &284722260
 GameObject:
   m_ObjectHideFlags: 0
@@ -736,6 +757,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   killMySelf: 0
+  seconds: 0
 --- !u!4 &376190996
 Transform:
   m_ObjectHideFlags: 0
@@ -1139,6 +1161,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   killMySelf: 0
+  seconds: 0
 --- !u!4 &713335385
 Transform:
   m_ObjectHideFlags: 0
@@ -1449,6 +1472,7 @@ GameObject:
   - component: {fileID: 843917545}
   - component: {fileID: 843917544}
   - component: {fileID: 843917543}
+  - component: {fileID: 843917547}
   m_Layer: 0
   m_Name: cajamadera (2)
   m_TagString: Untagged
@@ -1542,6 +1566,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   killMySelf: 0
+  seconds: 1
 --- !u!212 &843917546
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1592,6 +1617,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &843917547
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 843917541}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b9c8e7cb31dee14408e124fce499d32c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &886628498
 GameObject:
   m_ObjectHideFlags: 0
@@ -1838,6 +1882,7 @@ GameObject:
   - component: {fileID: 974755187}
   - component: {fileID: 974755186}
   - component: {fileID: 974755185}
+  - component: {fileID: 974755189}
   m_Layer: 0
   m_Name: cajamadera (5)
   m_TagString: Untagged
@@ -1931,6 +1976,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   killMySelf: 0
+  seconds: 1
 --- !u!212 &974755188
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1981,6 +2027,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &974755189
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 974755183}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b9c8e7cb31dee14408e124fce499d32c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &998517103
 GameObject:
   m_ObjectHideFlags: 0
@@ -2123,6 +2188,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   killMySelf: 0
+  seconds: 0
 --- !u!4 &998517108
 Transform:
   m_ObjectHideFlags: 0
@@ -2279,6 +2345,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   killMySelf: 0
+  seconds: 0
 --- !u!4 &1021525880
 Transform:
   m_ObjectHideFlags: 0
@@ -2818,6 +2885,7 @@ GameObject:
   - component: {fileID: 1265766054}
   - component: {fileID: 1265766053}
   - component: {fileID: 1265766052}
+  - component: {fileID: 1265766056}
   m_Layer: 0
   m_Name: cajamadera
   m_TagString: Untagged
@@ -2911,6 +2979,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   killMySelf: 0
+  seconds: 1
 --- !u!212 &1265766055
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2961,6 +3030,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1265766056
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1265766050}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b9c8e7cb31dee14408e124fce499d32c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1285936442
 GameObject:
   m_ObjectHideFlags: 0
@@ -3020,6 +3108,7 @@ GameObject:
   - component: {fileID: 1319090359}
   - component: {fileID: 1319090362}
   - component: {fileID: 1319090364}
+  - component: {fileID: 1319090363}
   m_Layer: 0
   m_Name: enemy
   m_TagString: Untagged
@@ -3144,6 +3233,25 @@ MonoBehaviour:
   enemy: {fileID: 1319090358}
   itsAlive: 1
   namee: Arriba
+--- !u!95 &1319090363
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1319090357}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b9c8e7cb31dee14408e124fce499d32c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &1319090364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3169,6 +3277,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   killMySelf: 0
+  seconds: 1
 --- !u!1 &1346991160
 GameObject:
   m_ObjectHideFlags: 0
@@ -3182,6 +3291,7 @@ GameObject:
   - component: {fileID: 1346991164}
   - component: {fileID: 1346991163}
   - component: {fileID: 1346991162}
+  - component: {fileID: 1346991166}
   m_Layer: 0
   m_Name: cajamadera (4)
   m_TagString: Untagged
@@ -3275,6 +3385,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   killMySelf: 0
+  seconds: 1
 --- !u!212 &1346991165
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3325,6 +3436,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1346991166
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1346991160}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b9c8e7cb31dee14408e124fce499d32c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1354176294
 GameObject:
   m_ObjectHideFlags: 0
@@ -4025,7 +4155,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!58 &1519480143
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4542,7 +4672,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1668153955
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4701,6 +4831,7 @@ GameObject:
   - component: {fileID: 1717436442}
   - component: {fileID: 1717436441}
   - component: {fileID: 1717436440}
+  - component: {fileID: 1717436444}
   m_Layer: 0
   m_Name: cajamadera (1)
   m_TagString: Untagged
@@ -4794,6 +4925,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   killMySelf: 0
+  seconds: 1
 --- !u!212 &1717436443
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4844,6 +4976,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1717436444
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1717436438}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b9c8e7cb31dee14408e124fce499d32c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1724639841
 GameObject:
   m_ObjectHideFlags: 0
@@ -5136,7 +5287,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1937791770
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5259,6 +5410,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   killMySelf: 0
+  seconds: 0
 --- !u!4 &1937791774
 Transform:
   m_ObjectHideFlags: 0
@@ -5415,6 +5567,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   killMySelf: 0
+  seconds: 0
 --- !u!4 &1990666678
 Transform:
   m_ObjectHideFlags: 0
@@ -5914,6 +6067,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   killMySelf: 0
+  seconds: 0
 --- !u!1 &2125249510
 GameObject:
   m_ObjectHideFlags: 0
@@ -6139,6 +6293,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   killMySelf: 0
+  seconds: 0
 --- !u!4 &2130952171
 Transform:
   m_ObjectHideFlags: 0

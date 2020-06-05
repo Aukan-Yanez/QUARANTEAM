@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 [ExecuteAlways]
 public class DamageMechanics : MonoBehaviour
@@ -62,14 +63,20 @@ public class DamageMechanics : MonoBehaviour
     private float freezeDamage = 0;
     private Animator deathAnimator;
 
+    [Header("segundos para morir")]
+    public int seconds;
+
     private Fire firep;
     private Ice icep;
     private Bomb bomb;
     private Spin spin;
     private Kirby kirby;
 
+    private bool animated = false;
+
     private void Start()
     {
+        seconds = 1;
         deathAnimator = GetComponent<Animator>();
         if (objectRigidbody2D!= null)
             objectRigidbody2D.mass = mass;
@@ -220,7 +227,7 @@ public class DamageMechanics : MonoBehaviour
         if (explode && health > -1)
         {
             health -= explotionDamage;
-            GameObject.Find(objectRigidbody2D.name).GetComponent<SpriteRenderer>().color = Color.red;
+            //GameObject.Find(objectRigidbody2D.name).GetComponent<SpriteRenderer>().color = Color.red;
         }
         if (freezable && health > -1)
         {
@@ -260,15 +267,31 @@ public class DamageMechanics : MonoBehaviour
     {
         if(health <= 0)
         {
-            GameObject.Find(objectRigidbody2D.name).GetComponent<SpriteRenderer>().enabled = false;
-            objectCollider2D.enabled = false;
+            if (!animated)
+            {
+                deathAnimation();
+                animated = true;
+                StartCoroutine(WaitForDeath(seconds));
+                
+            }
+
+            //gameObject.SetActive(false);
+            //GameObject.Find(objectRigidbody2D.name).GetComponent<SpriteRenderer>().enabled = false;
+            //objectCollider2D.enabled = false;
 
             giveScore();
         }
     }
 
+    IEnumerator WaitForDeath(int pSeconds)
+    {
+        yield return new WaitForSeconds(pSeconds);
+        gameObject.SetActive(false);
+    }
 
-    private void deathAnimation()
+
+
+        private void deathAnimation()
     {
         if (burnable)
         {
@@ -287,7 +310,7 @@ public class DamageMechanics : MonoBehaviour
 
         if (explode)
         {
-            deathAnimator.SetTrigger("Exploded");
+            deathAnimator.SetTrigger("Electric");
         }
         else
         {

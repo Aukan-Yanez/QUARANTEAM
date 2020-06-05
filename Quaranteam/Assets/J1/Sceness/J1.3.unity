@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 78997058}
   - component: {fileID: 78997057}
   - component: {fileID: 78997055}
+  - component: {fileID: 78997056}
   m_Layer: 0
   m_Name: enemy (1)
   m_TagString: Untagged
@@ -182,6 +183,25 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   killMySelf: 0
+--- !u!95 &78997056
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 78997053}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b9c8e7cb31dee14408e124fce499d32c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!58 &78997057
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1277,6 +1297,7 @@ GameObject:
   - component: {fileID: 501446377}
   - component: {fileID: 501446376}
   - component: {fileID: 501446375}
+  - component: {fileID: 501446380}
   m_Layer: 0
   m_Name: cajamadera
   m_TagString: Untagged
@@ -1420,6 +1441,25 @@ Transform:
   m_Father: {fileID: 1837540715}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &501446380
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 501446374}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b9c8e7cb31dee14408e124fce499d32c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &513473283
 GameObject:
   m_ObjectHideFlags: 0
@@ -1602,6 +1642,7 @@ GameObject:
   - component: {fileID: 772238137}
   - component: {fileID: 772238136}
   - component: {fileID: 772238135}
+  - component: {fileID: 772238139}
   m_Layer: 0
   m_Name: cajamadera (5)
   m_TagString: Untagged
@@ -1745,6 +1786,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &772238139
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772238133}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b9c8e7cb31dee14408e124fce499d32c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &886628498
 GameObject:
   m_ObjectHideFlags: 0
@@ -2071,6 +2131,7 @@ GameObject:
   - component: {fileID: 1073619689}
   - component: {fileID: 1073619688}
   - component: {fileID: 1073619687}
+  - component: {fileID: 1073619692}
   m_Layer: 0
   m_Name: cajamadera (1)
   m_TagString: Untagged
@@ -2214,6 +2275,25 @@ Transform:
   m_Father: {fileID: 1837540715}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1073619692
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1073619686}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b9c8e7cb31dee14408e124fce499d32c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1105419128
 GameObject:
   m_ObjectHideFlags: 0
@@ -2693,6 +2773,7 @@ GameObject:
   - component: {fileID: 1319090359}
   - component: {fileID: 1319090363}
   - component: {fileID: 1319090364}
+  - component: {fileID: 1319090365}
   m_Layer: 0
   m_Name: enemy
   m_TagString: Untagged
@@ -2874,6 +2955,25 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   killMySelf: 0
+--- !u!95 &1319090365
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1319090357}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b9c8e7cb31dee14408e124fce499d32c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1396146151
 GameObject:
   m_ObjectHideFlags: 0
@@ -3406,11 +3506,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b297c1e1b36a4a34f8ff16cc2f8e5aad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gen: {fileID: 0}
   objectTestTransform: {fileID: 1519480145}
   rb: {fileID: 1519480142}
   cl: {fileID: 1519480143}
+  ccl: {fileID: 0}
   isActive: 1
   canRemoveGravity: 0
+  disapTime: 0
   fire:
     enable: 0
     burningDamage: 1
@@ -3448,6 +3551,14 @@ MonoBehaviour:
     lm:
       serializedVersion: 2
       m_Bits: 0
+  expand:
+    radio: 0
+    radiusScale: 0
+    mass: 0
+    enable: 0
+    initRad: 0
+    cl: {fileID: 0}
+    bl: {fileID: 0}
   animator: {fileID: 1519480150}
   AnimationTime: 20
 --- !u!120 &1519480149
@@ -3788,6 +3899,7 @@ GameObject:
   - component: {fileID: 1661228137}
   - component: {fileID: 1661228136}
   - component: {fileID: 1661228135}
+  - component: {fileID: 1661228140}
   m_Layer: 0
   m_Name: cajamadera (3)
   m_TagString: Untagged
@@ -3931,6 +4043,25 @@ Transform:
   m_Father: {fileID: 1837540715}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1661228140
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1661228134}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b9c8e7cb31dee14408e124fce499d32c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1668153954
 GameObject:
   m_ObjectHideFlags: 0
@@ -4301,6 +4432,7 @@ GameObject:
   - component: {fileID: 1793297400}
   - component: {fileID: 1793297399}
   - component: {fileID: 1793297398}
+  - component: {fileID: 1793297403}
   m_Layer: 0
   m_Name: cajamadera (4)
   m_TagString: Untagged
@@ -4444,6 +4576,25 @@ Transform:
   m_Father: {fileID: 1837540715}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1793297403
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1793297397}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b9c8e7cb31dee14408e124fce499d32c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1837540714
 GameObject:
   m_ObjectHideFlags: 0
@@ -4614,6 +4765,7 @@ GameObject:
   - component: {fileID: 1954644299}
   - component: {fileID: 1954644298}
   - component: {fileID: 1954644297}
+  - component: {fileID: 1954644302}
   m_Layer: 0
   m_Name: enemy (3)
   m_TagString: Untagged
@@ -4763,6 +4915,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1954644302
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1954644295}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b9c8e7cb31dee14408e124fce499d32c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2088025279
 GameObject:
   m_ObjectHideFlags: 0
@@ -4777,6 +4948,7 @@ GameObject:
   - component: {fileID: 2088025284}
   - component: {fileID: 2088025283}
   - component: {fileID: 2088025281}
+  - component: {fileID: 2088025282}
   m_Layer: 0
   m_Name: enemy (2)
   m_TagString: Untagged
@@ -4824,6 +4996,25 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   killMySelf: 0
+--- !u!95 &2088025282
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2088025279}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b9c8e7cb31dee14408e124fce499d32c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!58 &2088025283
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4939,6 +5130,7 @@ GameObject:
   - component: {fileID: 2107024245}
   - component: {fileID: 2107024244}
   - component: {fileID: 2107024243}
+  - component: {fileID: 2107024248}
   m_Layer: 0
   m_Name: cajamadera (2)
   m_TagString: Untagged
@@ -5082,6 +5274,25 @@ Transform:
   m_Father: {fileID: 1837540715}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &2107024248
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2107024242}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b9c8e7cb31dee14408e124fce499d32c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2125249510
 GameObject:
   m_ObjectHideFlags: 0
