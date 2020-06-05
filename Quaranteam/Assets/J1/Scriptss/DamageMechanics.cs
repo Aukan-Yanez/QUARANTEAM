@@ -60,6 +60,7 @@ public class DamageMechanics : MonoBehaviour
     private float freezingTime = 0f;
     private float initialDamagePercentage = 0f;
     private float freezeDamage = 0;
+    private Animator deathAnimator;
 
     private Fire firep;
     private Ice icep;
@@ -69,7 +70,8 @@ public class DamageMechanics : MonoBehaviour
 
     private void Start()
     {
-        if(objectRigidbody2D!= null)
+        deathAnimator = GetComponent<Animator>();
+        if (objectRigidbody2D!= null)
             objectRigidbody2D.mass = mass;
     }
 
@@ -212,7 +214,7 @@ public class DamageMechanics : MonoBehaviour
         if(burnable && health > -1) 
         {
             health -= burningDamage;
-            GameObject.Find(objectRigidbody2D.name).GetComponent<SpriteRenderer>().color = new Color(255,100,0);
+            gameObject.GetComponent<SpriteRenderer>().color = new Color(255,100,0);
             burnsAreaAround();
         }
         if (explode && health > -1)
@@ -264,6 +266,35 @@ public class DamageMechanics : MonoBehaviour
             giveScore();
         }
     }
+
+
+    private void deathAnimation()
+    {
+        if (burnable)
+        {
+            deathAnimator.SetTrigger("Burned");
+        }
+
+        if (freezable)
+        {
+            deathAnimator.SetTrigger("Frozen");
+        }
+
+        if (rotable)
+        {
+            deathAnimator.SetTrigger("Rotated");
+        }
+
+        if (explode)
+        {
+            deathAnimator.SetTrigger("Exploded");
+        }
+        else
+        {
+            deathAnimator.SetTrigger("OtherDeath");
+        }
+    }
+
 
     private void giveScore()
     {
