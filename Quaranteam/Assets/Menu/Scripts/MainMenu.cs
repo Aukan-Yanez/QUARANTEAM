@@ -11,20 +11,12 @@ public class MainMenu : MonoBehaviour
     public GameObject MenuGame2;
     public GameObject MenuGame3;
 
+
     public static bool isMenu = false;
     public static bool isGame1 = false;
     public static bool isGame2 = false;
     public static bool isGame3 = false;
-    
-    void Start()
-    {
-
-    }
-
-    void Update()
-    {
-       
-    }
+ 
 
     public void startGame()
     {
@@ -53,6 +45,7 @@ public class MainMenu : MonoBehaviour
         }
         
     }
+
     public void showSettingFromGame2()
     {
         if (!isGame2)
@@ -95,5 +88,4 @@ public class MainMenu : MonoBehaviour
             MenuGame3.SetActive(true);
         }
     }
-
 }
