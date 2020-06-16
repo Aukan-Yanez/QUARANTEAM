@@ -1874,8 +1874,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -402, y: 228}
-  m_SizeDelta: {x: 761.9426, y: 409.82074}
+  m_AnchoredPosition: {x: -400, y: 225}
+  m_SizeDelta: {x: 760, y: 410}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &806234360
 MonoBehaviour:
@@ -2033,8 +2033,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -407.2, y: -219.5}
-  m_SizeDelta: {x: 748.7197, y: 423.03223}
+  m_AnchoredPosition: {x: -400, y: -225}
+  m_SizeDelta: {x: 760, y: 410}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &901883789
 MonoBehaviour:
@@ -2147,7 +2147,7 @@ Animator:
   m_GameObject: {fileID: 901883787}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b01c4138a0666e64a898dca3dbd264f0, type: 2}
+  m_Controller: {fileID: 9100000, guid: bf7b366ce31da3a41beba68db822d9a2, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2876,7 +2876,7 @@ GameObject:
   - component: {fileID: 1117585383}
   - component: {fileID: 1117585382}
   m_Layer: 5
-  m_Name: Image
+  m_Name: ButtonStar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2898,8 +2898,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -16, y: 13}
-  m_SizeDelta: {x: 400, y: 400}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1117585382
 MonoBehaviour:
@@ -3637,8 +3637,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 384.1, y: 223.8}
-  m_SizeDelta: {x: 754.22766, y: 406.50934}
+  m_AnchoredPosition: {x: 400, y: 225}
+  m_SizeDelta: {x: 760, y: 410}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1363086293
 MonoBehaviour:
@@ -3751,7 +3751,7 @@ Animator:
   m_GameObject: {fileID: 1363086291}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b01c4138a0666e64a898dca3dbd264f0, type: 2}
+  m_Controller: {fileID: 9100000, guid: c3dcd52aacb5c4840a82c4d5cb00effd, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
