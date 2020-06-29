@@ -153,7 +153,7 @@ public class BlackholeDef : MonoBehaviour
         }
     }
 
-    private void OnDrawGizmosSelected()
+    private void OnDrawGizmos()
     {
         if (components.transform == null)
             return;

@@ -52,18 +52,17 @@ public class GravityDef : MonoBehaviour
 
     private void attractAll()
     {
-        Collider2D[] colliders = GameObject.FindObjectsOfType<Collider2D>();
+        Rigidbody2D[] rigidbodies = GameObject.FindObjectsOfType<Rigidbody2D>();
 
-        foreach (Collider2D collider in colliders)
+        foreach (Rigidbody2D rigidbody in rigidbodies)
         {
-            Rigidbody2D haveRigidbody2D = GameObject.Find(collider.name).GetComponent<Rigidbody2D>();
-            bool isntMyself = collider != components.circleCollider2D;
-            if (haveRigidbody2D && isntMyself)
+            bool isntMyself = rigidbody != components.rigidbody2D;
+            if (isntMyself)
             {
-                float initgravityScale = haveRigidbody2D.gravityScale;//Guarda la gravedad "fuera del blackhole"
-                haveRigidbody2D.gravityScale = 0;                     //lo deja sin gravedad
-                Attract(haveRigidbody2D);                             //lo atrae según la gravedad del blackhole
-                haveRigidbody2D.gravityScale = initgravityScale;      //le devuelve la gravedad inicial, en caso de ser más fuerte (la gravedad "fuera del blackhole"), el objeto saldrá del blackhole
+                float initgravityScale = rigidbody.gravityScale;//Guarda la gravedad "fuera del blackhole"
+                rigidbody.gravityScale = 0;                     //lo deja sin gravedad
+                Attract(rigidbody);                             //lo atrae según la gravedad del blackhole
+                rigidbody.gravityScale = initgravityScale;      //le devuelve la gravedad inicial, en caso de ser más fuerte (la gravedad "fuera del blackhole"), el objeto saldrá del blackhole
             }
         }
 
@@ -144,9 +143,9 @@ public class GravityDef : MonoBehaviour
         }
     }
 
-    private void OnDrawGizmosSelected()
+    private void OnDrawGizmos()
     {
-        if (components.transform == null)
+        if (components.transform == null || components.haloTransform == null)
             return;
         if (objective.checkInRange)
         {
