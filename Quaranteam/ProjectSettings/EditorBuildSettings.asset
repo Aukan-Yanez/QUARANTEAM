@@ -21,7 +21,7 @@ EditorBuildSettings:
     path: Assets/J1/Sceness/J1.1.unity
     guid: 6612d368fb149f049a0de25bd3f628c0
   - enabled: 0
-    path: Assets/J2/Sceness/J2.unity
+    path: Assets/J2/Sceness/J2-1.unity
     guid: acd07d01e8a44c84794329243770768f
   - enabled: 0
     path: Assets/J3/Scenes/Game3.unity
