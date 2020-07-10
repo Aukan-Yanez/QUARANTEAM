@@ -13,6 +13,12 @@ public class ProjectileTwo : MonoBehaviour
     private bool isClickingOnDirection;
     private bool wasLaunched;
     private Vector2 playerInitPos;
+    [Range(0,1000)]
+    public float lifeTime = 40;
+    public ScoreD sd;
+    [HideInInspector]
+    public int isDead = 0;
+    public Collider2D kirbyT;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +43,29 @@ public class ProjectileTwo : MonoBehaviour
         varyTheForceDirection();
         whoIsClicked();
         checkingForTrigger();
+        updateLife();
+    }
+
+    private void updateLife()
+    {
+        if (wasLaunched && lifeTime>0)
+        {
+            lifeTime -= 1;
+        }
+        if (lifeTime == 0)
+        {
+            sd.addPoint();
+            if (isDead == 0)
+            {
+                isDead = 2;
+            }
+
+        }
+        if (components.thisObject.GetComponent<Rigidbody2D>().IsTouching(kirbyT))
+        {
+            isDead = 1;
+            lifeTime = 0;
+        }
     }
 
     private void OnMouseDownLeft()
@@ -99,8 +128,8 @@ public class ProjectileTwo : MonoBehaviour
             //Debug.Log(collider.name);
             if (collider.OverlapPoint(mousePosition) && isPressing)
             {
-                Debug.Log("Player: " + components.thisObject.name);
-                Debug.Log("Vector: " + components.directionDraggable.name);
+                //Debug.Log("Player: " + components.thisObject.name);
+                //Debug.Log("Vector: " + components.directionDraggable.name);
                 if (collider.name == components.thisObject.name)
                 {
                     isClickingOnPlayer = true;
