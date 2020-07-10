@@ -1170,8 +1170,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 216773986}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -2953.125}
-  m_LocalScale: {x: 0.53, y: 0.69, z: 32.8125}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.8993129, y: 2.47269, z: 117.58719}
   m_Children:
   - {fileID: 1119667812}
   - {fileID: 34295082}
@@ -1180,7 +1180,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -116.2, y: 143.9}
+  m_AnchoredPosition: {x: -1.9387, y: 375}
   m_SizeDelta: {x: 210.95624, y: 17.105988}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &260545672
@@ -1642,15 +1642,15 @@ RectTransform:
   m_GameObject: {fileID: 354731635}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.6868, y: 2.6868, z: 2.6868}
   m_Children: []
   m_Father: {fileID: 659273873}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000019073, y: 0}
-  m_SizeDelta: {x: 279.83243, y: 50}
+  m_AnchoredPosition: {x: -0.00042725, y: -0.0010223}
+  m_SizeDelta: {x: 714.8192, y: 349.34717}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &354731637
 MonoBehaviour:
@@ -1715,7 +1715,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 0
+  m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -2556,10 +2556,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -3614,14 +3614,14 @@ RectTransform:
   m_GameObject: {fileID: 843490944}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5280353, y: 0.5215163, z: 0.5215163}
+  m_LocalScale: {x: 1.088987, y: 1.0755428, z: 1.0755428}
   m_Children: []
   m_Father: {fileID: 659273873}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 63, y: -43}
+  m_AnchoredPosition: {x: 185.34, y: -84.121}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &843490946
@@ -4076,14 +4076,14 @@ RectTransform:
   m_GameObject: {fileID: 1021536562}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.4662182, y: 2.4662182, z: 2.4662182}
+  m_LocalScale: {x: 5.086175, y: 5.086175, z: 5.086175}
   m_Children: []
   m_Father: {fileID: 659273873}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 147, y: -41}
+  m_AnchoredPosition: {x: 358.57, y: -80}
   m_SizeDelta: {x: 43.18669, y: 22.852692}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1021536564
@@ -6171,7 +6171,7 @@ RectTransform:
   m_GameObject: {fileID: 1730857806}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3.057, y: 3.057, z: 3.057}
   m_Children: []
   m_Father: {fileID: 659273873}
   m_RootOrder: 3
@@ -13228,6 +13228,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 2.89212
+      objectReference: {fileID: 0}
+    - target: {fileID: 3944228989306330575, guid: 518be4f12b7778a49a901ac0dc4f2443,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.06995391
+      objectReference: {fileID: 0}
+    - target: {fileID: 3944228989306330575, guid: 518be4f12b7778a49a901ac0dc4f2443,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.14855208
+      objectReference: {fileID: 0}
+    - target: {fileID: 3944228989306330575, guid: 518be4f12b7778a49a901ac0dc4f2443,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.80765015
       objectReference: {fileID: 0}
     - target: {fileID: 4860248312788571957, guid: 518be4f12b7778a49a901ac0dc4f2443,
         type: 3}
