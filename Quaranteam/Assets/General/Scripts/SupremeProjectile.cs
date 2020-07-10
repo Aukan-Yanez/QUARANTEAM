@@ -28,6 +28,7 @@ public class SupremeProjectile : MonoBehaviour
     [HideInInspector]
     public float timeInGravityField = 5;
     private float initGrav = 0;
+
     #endregion
     #endregion
 
@@ -220,6 +221,7 @@ public class SupremeProjectile : MonoBehaviour
         {
             if (collider.Equals(components.collider2D))//Si el collider actual es el collider del proyectil, retorna true
             {
+                hideTrajectory();
                 return true;
             }
         }
@@ -267,10 +269,18 @@ public class SupremeProjectile : MonoBehaviour
         return true;
     }
 
+    private float fixedVelocity(float velocity)
+    {
+        float distanciaMaxima = properties.maxRadiusToLaunch;
+        float distanciaActual = Mathf.Abs((components.rigidbody2D.position - components.hookRigidbody2D.position).magnitude);
+
+        return distanciaActual * velocity / distanciaMaxima;
+    }
+
     private void showTrajectory()
     {
         Vector2 direccion = (components.hookRigidbody2D.position - components.rigidbody2D.position).normalized;
-        Vector2 velocidadInicial = direccion * properties.initialVelocityMagnitude;
+        Vector2 velocidadInicial = direccion * fixedVelocity(properties.initialVelocityMagnitude);
 
         Vector2 posicionInicial = components.rigidbody2D.position;
         Vector2 gravedad = Physics2D.gravity;
