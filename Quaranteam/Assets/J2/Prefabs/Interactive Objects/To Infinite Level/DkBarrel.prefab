@@ -164,6 +164,8 @@ MonoBehaviour:
   properties:
     detectionArea: 1.27
     shootForceMagnitude: 831
+  exception: 
+  exception2: 
   layers:
     serializedVersion: 2
     m_Bits: 1
@@ -180,7 +182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activateDeath: 1
-  secondsToDie: 5
+  secondsToDie: 3
 --- !u!1 &6310472855579471956
 GameObject:
   m_ObjectHideFlags: 0

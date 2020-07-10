@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9094667834429252992}
   - component: {fileID: 9094667834429252995}
+  - component: {fileID: 8483151518882429554}
   - component: {fileID: 9094667834429252994}
   m_Layer: 0
   m_Name: Bird 24
@@ -82,6 +83,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8483151518882429554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9094667834429253021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38abe984841c4c047a475c9b6017d31f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activateDeath: 1
+  secondsToDie: 3
 --- !u!95 &9094667834429252994
 Animator:
   serializedVersion: 3

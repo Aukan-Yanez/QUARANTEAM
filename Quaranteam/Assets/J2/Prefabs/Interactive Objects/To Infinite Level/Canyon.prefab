@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activateDeath: 1
-  secondsToDie: 5
+  secondsToDie: 3
 --- !u!1 &6738755086479161500
 GameObject:
   m_ObjectHideFlags: 0
@@ -304,3 +304,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerRigidBody2D: {fileID: 6738755086479161496}
   playerCircleCollider2D: {fileID: 6738755086479161499}
+  playerBoxCollider2D: {fileID: 0}
