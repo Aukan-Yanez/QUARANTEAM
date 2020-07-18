@@ -8,16 +8,13 @@ public class FollowmouseDef : MonoBehaviour
     private bool itsGrabbed = false;
     public Rigidbody2D playerRigidBody2D;
     public CircleCollider2D playerCircleCollider2D;
+    public BoxCollider2D playerBoxCollider2D;
     // Start is called before the first frame update
     void Start()
     {
         if (playerRigidBody2D==null)
         {
             playerRigidBody2D = GameObject.Find(this.name).GetComponent<Rigidbody2D>();
-        }
-        if (playerCircleCollider2D==null)
-        {
-            playerCircleCollider2D = GameObject.Find(this.name).GetComponent<CircleCollider2D>();
         }
     }
 

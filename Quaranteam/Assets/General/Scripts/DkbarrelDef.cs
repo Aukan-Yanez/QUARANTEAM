@@ -6,6 +6,8 @@ public class DkbarrelDef : MonoBehaviour
 {
     public DkComponents components;
     public DkProperties properties;
+    public string exception;
+    public string exception2;
     //public DkObjective objective;
 
     public LayerMask layers;
@@ -50,14 +52,17 @@ public class DkbarrelDef : MonoBehaviour
             
             foreach (Collider2D collider in currentColliders)
             {
-                
-                if (!CurrentBullets.Contains((collider, collider.gameObject.GetComponent<Rigidbody2D>().gravityScale)))// && currentCollider != components.exitSideCollider)
+                if (collider.name != exception && collider.name != exception2)
                 {
-                    CurrentBullets.Add((collider, collider.gameObject.GetComponent<Rigidbody2D>().gravityScale));
-                    collider.gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
-                    collider.gameObject.GetComponent<Rigidbody2D>().position = components.rigidbody.position;
-                    collider.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-                }
+                    print("Agregando: " + collider.name);
+                    if (!CurrentBullets.Contains((collider, collider.gameObject.GetComponent<Rigidbody2D>().gravityScale)))// && currentCollider != components.exitSideCollider)
+                    {
+                        CurrentBullets.Add((collider, collider.gameObject.GetComponent<Rigidbody2D>().gravityScale));
+                        collider.gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
+                        collider.gameObject.GetComponent<Rigidbody2D>().position = components.rigidbody.position;
+                        collider.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+                    }
+                }            
             }
 
             if (Input.GetMouseButtonDown(0) && currentColliders.Length>0)

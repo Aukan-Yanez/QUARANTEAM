@@ -2,14 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class Nextlevel : MonoBehaviour
 {
     private ScoreD score;
-    private bool canGoNextLevel = false;
+    private bool existsLevel = false;
+    private bool canChangeLevel = false;
     [Range(0,10)]
     public int pointsToWin = 1;
     public int nextSceneIndex = 2;
+    public GameObject victoria;
+    public GameObject derrota;
+    public ProjectileTwo projectile;
+
     //public string nextSceneName = "J1.2";
     
     [Range(0, 200)]
@@ -28,11 +34,49 @@ public class Nextlevel : MonoBehaviour
     void Update()
     {
         checkScore();
-        if (canGoNextLevel)
+        if (existsLevel && canChangeLevel)
         {
             loadScene();
         }
+        checkForVictory();
     }
+
+    private void checkForVictory()
+    {
+        if(victoria && derrota && projectile && score.getScore() >= pointsToWin)
+        {
+            if (projectile.isDead == 1)
+            {
+                StartCoroutine("waitForWinner");
+            }
+            if (projectile.isDead == 2)
+            {
+                StartCoroutine("waitForLoser");
+                
+            }
+        }
+        if (!victoria && !derrota && !projectile && score.getScore() >= pointsToWin)
+        {
+            canChangeLevel = true;
+        }
+    }
+
+
+    IEnumerator waitForWinner()
+    {
+        victoria.SetActive(true);
+        yield return new WaitForSeconds(2);
+        canChangeLevel = true;
+    }
+
+    IEnumerator waitForLoser()
+    {
+        derrota.SetActive(true);
+        yield return new WaitForSeconds(2);
+        nextSceneIndex = 0;
+        canChangeLevel = true;
+    }
+
 
     private void checkScore()
     {
@@ -41,7 +85,7 @@ public class Nextlevel : MonoBehaviour
             Scene nextScene = SceneManager.GetSceneByBuildIndex(nextSceneIndex);
             if (nextScene != null)
             {
-                canGoNextLevel = true;
+                existsLevel = true;
             }
             else
             {
@@ -56,7 +100,7 @@ public class Nextlevel : MonoBehaviour
         delayTime -= 1;
         if (delayTime<=0)
         {
-            canGoNextLevel = false;
+            existsLevel = false;
             SceneManager.LoadScene(nextSceneIndex);
         }
     }

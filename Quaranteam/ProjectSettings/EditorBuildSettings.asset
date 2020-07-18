@@ -20,9 +20,21 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/J1/Sceness/J1.1.unity
     guid: 6612d368fb149f049a0de25bd3f628c0
-  - enabled: 0
-    path: Assets/J2/Sceness/J2.unity
+  - enabled: 1
+    path: Assets/J2/Sceness/J2-1.unity
+    guid: 4ec3f7b96051e4d4b879b0f238284e4b
+  - enabled: 1
+    path: Assets/J2/Sceness/J2-2.unity
     guid: acd07d01e8a44c84794329243770768f
+  - enabled: 1
+    path: Assets/J2/Sceness/J2-3.unity
+    guid: 58cf68127dca89c46be381762c5f3b86
+  - enabled: 1
+    path: Assets/J2/Sceness/J2-4.unity
+    guid: b8f13ad3829a18f4691d8fefc98f2e75
+  - enabled: 1
+    path: Assets/J2/Sceness/Level_infinite.unity
+    guid: 511fd99bfd19e6148a88174b2c8f6649
   - enabled: 0
     path: Assets/J3/Scenes/Game3.unity
     guid: 8015e5ebe2634fe429b1859d379e26ba
