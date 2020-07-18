@@ -7,49 +7,49 @@ using UnityEngine.EventSystems;
 
 public class startAnimation : MonoBehaviour
 {
-    public Button ButtonJ1;
-    public Button ButtonJ2;
-    public Button ButtonJ3;
-    public Button ButtonStart;
 
-    bool activateJ1 = false;
-    bool activateJ2 = false;
-    bool activateJ3 = false;
+    public GameObject ButtonGame1;
+    public GameObject ButtonGame2;
+    public GameObject ButtonGame3;
+    public GameObject ButtonStart;
+
+    private Animator J1_anim;
+    private Animator J2_anim;
+    private Animator J3_anim;
+    private Animator Start_Anim;
+
+    private void Awake()
+    {
+        J1_anim = ButtonGame1.GetComponent<Animator>();
+        J2_anim = ButtonGame2.GetComponent<Animator>();
+        J3_anim = ButtonGame3.GetComponent<Animator>();
+        Start_Anim = ButtonStart.GetComponent<Animator>();
+    }
 
     void Update()
     {
-        string J1 = ButtonJ1.gameObject.GetComponent<Animator>().GetCurrentAnimatorClipInfo(0)[0].clip.name;
-        string J2 = ButtonJ2.gameObject.GetComponent<Animator>().GetCurrentAnimatorClipInfo(0)[0].clip.name;
-        string J3 = ButtonJ3.gameObject.GetComponent<Animator>().GetCurrentAnimatorClipInfo(0)[0].clip.name;
+        string J1 = ButtonGame1.GetComponent<Animator>().GetCurrentAnimatorClipInfo(0)[0].clip.name;
+        string J2 = ButtonGame2.GetComponent<Animator>().GetCurrentAnimatorClipInfo(0)[0].clip.name;
+        string J3 = ButtonGame3.GetComponent<Animator>().GetCurrentAnimatorClipInfo(0)[0].clip.name;
 
-        if (J1 == "Highlighted" && !activateJ1)
+        if (J1 == "Highlighted")
         {
-            ButtonStart.gameObject.GetComponent<Animator>().SetTrigger("StartJ1");
-            activateJ1 = true;
-            activateJ2 = false;
-            activateJ3 = false;
+            Start_Anim.Play("StartJ1");
+        }
 
-        }
-        if (J2 == "Highlighted" && !activateJ2)
+        if (J2 == "Highlighted")
         {
-            ButtonStart.gameObject.GetComponent<Animator>().SetTrigger("StartJ2");
-            activateJ1 = false;
-            activateJ2 = true;
-            activateJ3 = false;
+            Start_Anim.Play("StartJ2");
         }
-        if (J3 == "Highlighted" && !activateJ3)
+
+        if (J3 == "Highlighted")
         {
-            ButtonStart.gameObject.GetComponent<Animator>().SetTrigger("StartJ3");
-            activateJ1 = false;
-            activateJ2 = false;
-            activateJ3 = true;
+            Start_Anim.Play("StartJ3");
         }
+
         if (J1 == "Normal" && J2 == "Normal" && J3 == "Normal")
         {
-            ButtonStart.gameObject.GetComponent<Animator>().SetTrigger("Normal");
-            activateJ1 = false;
-            activateJ2 = false;
-            activateJ3 = false;
+            Start_Anim.Play("Normal");
         }
     }
 }
