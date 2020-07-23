@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\fabi_\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\fabi_\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_Quaranteam.-2144224012.00" t="ExcludeRecursive" />
+    <e p="D:\Notebook\Documentos\GitHub\QT\Quaranteam" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="2d-extras-master" t="Include">
+          <e p="Editor" t="Include">
+            <e p="Brushes" t="Include">
+              <e p="CoordinateBrush" t="Include">
+                <e p="CoordinateBrush.cs" t="Include" />
+              </e>
+              <e p="GameObjectBrush" t="Include">
+                <e p="GameObjectBrush.cs" t="Include" />
+              </e>
+              <e p="GroupBrush" t="Include">
+                <e p="GroupBrush.cs" t="Include" />
+              </e>
+              <e p="LineBrush" t="Include">
+                <e p="LineBrush.cs" t="Include" />
+              </e>
+              <e p="PrefabBrushes" t="Include">
+                <e p="BasePrefabBrush.cs" t="Include" />
+                <e p="PrefabBrush" t="Include">
+                  <e p="PrefabBrush.cs" t="Include" />
+                </e>
+                <e p="PrefabRandomBrush" t="Include">
+                  <e p="PrefabRandomBrush.cs" t="Include" />
+                </e>
+              </e>
+              <e p="RandomBrush" t="Include">
+                <e p="RandomBrush.cs" t="Include" />
+              </e>
+              <e p="TintBrush" t="Include">
+                <e p="TintBrush.cs" t="Include" />
+              </e>
+              <e p="TintBrushSmooth" t="Include">
+                <e p="TintBrushSmooth.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Tiles" t="Include">
+              <e p="HexagonalRuleTile" t="Include">
+                <e p="HexagonalRuleTileEditor.cs" t="Include" />
+              </e>
+              <e p="IsometricRuleTile" t="Include">
+                <e p="IsometricRuleTileEditor.cs" t="Include" />
+              </e>
+              <e p="RuleOverrideTile" t="Include">
+                <e p="AdvancedRuleOverrideTileEditor.cs" t="Include" />
+                <e p="PopulateRuleOverrideTileWizard.cs" t="Include" />
+                <e p="RuleOverrideTileEditor.cs" t="Include" />
+              </e>
+              <e p="RuleTile" t="Include">
+                <e p="CustomRuleTileMenu.cs" t="Include" />
+                <e p="RuleTileEditor.cs" t="Include" />
+                <e p="ScriptTemplates" t="Include">
+                  <e p="NewCustomRuleTile.cs.txt" t="Include" />
+                </e>
+              </e>
+            </e>
+            <e p="Unity.2D.Tilemap.Extras.Editor.asmdef" t="Include" />
+          </e>
+          <e p="Runtime" t="Include">
+            <e p="Brushes" t="Include">
+              <e p="TintedTilemap.shader" t="Include" />
+              <e p="TintTextureGenerator.cs" t="Include" />
+            </e>
+            <e p="GridInformation" t="Include">
+              <e p="GridInformation.cs" t="Include" />
+            </e>
+            <e p="Tiles" t="Include">
+              <e p="AnimatedTile" t="Include">
+                <e p="AnimatedTile.cs" t="Include" />
+              </e>
+              <e p="HexagonalRuleTile" t="Include">
+                <e p="HexagonalRuleTile.cs" t="Include" />
+              </e>
+              <e p="IsometricRuleTile" t="Include">
+                <e p="IsometricRuleTile.cs" t="Include" />
+              </e>
+              <e p="PipelineTile" t="Include">
+                <e p="PipelineTile.cs" t="Include" />
+              </e>
+              <e p="RandomTile" t="Include">
+                <e p="RandomTile.cs" t="Include" />
+              </e>
+              <e p="RuleOverrideTile" t="Include">
+                <e p="AdvancedRuleOverrideTile.cs" t="Include" />
+                <e p="RuleOverrideTile.cs" t="Include" />
+              </e>
+              <e p="RuleTile" t="Include">
+                <e p="RuleTile.cs" t="Include" />
+              </e>
+              <e p="TerrainTile" t="Include">
+                <e p="TerrainTile.cs" t="Include" />
+              </e>
+              <e p="WeightedRandomTile" t="Include">
+                <e p="WeightedRandomTile.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Unity.2D.Tilemap.Extras.asmdef" t="Include" />
+          </e>
+          <e p="Tests" t="Include">
+            <e p="Editor" t="Include">
+              <e p="PlaceholderTests.cs" t="Include" />
+              <e p="Unity.2D.Tilemap.Extras.EditorTests.asmdef" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="General" t="Include">
+          <e p="Scripts" t="Include">
+            <e p="BlackholeDef.cs" t="Include" />
+            <e p="Buscar.cs" t="Include" />
+            <e p="CameraManager.cs" t="Include" />
+            <e p="CanyonDef.cs" t="Include" />
+            <e p="DamagemechanicsDef.cs" t="Include" />
+            <e p="DirectionVector.cs" t="Include" />
+            <e p="DkbarrelDef.cs" t="Include" />
+            <e p="FollowmouseDef.cs" t="Include" />
+            <e p="GravityDef.cs" t="Include" />
+            <e p="LevelVisualizer.cs" t="Include" />
+            <e p="LineargravityDef.cs" t="Include" />
+            <e p="MobileplatformDef.cs" t="Include" />
+            <e p="Movement.cs" t="Include" />
+            <e p="PlayermovementDef.cs" t="Include" />
+            <e p="Portal.cs" t="Include" />
+            <e p="ProjectileDef.cs" t="Include" />
+            <e p="ProjectileTwo.cs" t="Include" />
+            <e p="SidetoSide.cs" t="Include" />
+            <e p="Slots.cs" t="Include" />
+            <e p="SupremeProjectile.cs" t="Include" />
+          </e>
+        </e>
+        <e p="J1" t="Include">
+          <e p="Scriptss" t="Include">
+            <e p="BhInspector.cs" t="Include" />
+            <e p="DamageMechanics.cs" t="Include" />
+            <e p="Enemy.cs" t="Include" />
+            <e p="LevelLoader.cs" t="Include" />
+            <e p="Nextlevel.cs" t="Include" />
+            <e p="PauseMenu.cs" t="Include" />
+            <e p="PlayerMovement.cs" t="Include" />
+            <e p="Projectile.cs" t="Include" />
+            <e p="Score.cs" t="Include" />
+            <e p="ScoreD.cs" t="Include" />
+          </e>
+        </e>
+        <e p="J2" t="Include">
+          <e p="Scriptss" t="Include">
+            <e p="Assassin.cs" t="Include" />
+            <e p="Attractor.cs" t="Include" />
+            <e p="Barril.cs" t="Include" />
+            <e p="Blackhole.cs" t="Include" />
+            <e p="BouncingSurface.cs" t="Include" />
+            <e p="Canyon.cs" t="Include" />
+            <e p="ChangePriorityCam.cs" t="Include" />
+            <e p="CheckPoint.cs" t="Include" />
+            <e p="CoinMecanics.cs" t="Include" />
+            <e p="DetectVictory.cs" t="Include" />
+            <e p="FollowAxisX.cs" t="Include" />
+            <e p="FollowMouse.cs" t="Include" />
+            <e p="GameManagerJ2.cs" t="Include" />
+            <e p="Generators" t="Include">
+              <e p="GenInteractives.cs" t="Include" />
+            </e>
+            <e p="Gravity.cs" t="Include" />
+            <e p="LinearGravity.cs" t="Include" />
+            <e p="MovementAtoB.cs" t="Include" />
+            <e p="PauseOptions.cs" t="Include" />
+            <e p="RotateCanyon.cs" t="Include" />
+            <e p="SecondsToDie.cs" t="Include" />
+            <e p="StarsCount.cs" t="Include" />
+            <e p="Vaiven.cs" t="Include" />
+          </e>
+        </e>
+        <e p="J3" t="Include">
+          <e p="Scripts" t="Include">
+            <e p="DragHandler.cs" t="Include" />
+            <e p="DropSlot.cs" t="Include" />
+            <e p="PauseManager.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Menu" t="Include">
+          <e p="Scripts" t="Include">
+            <e p="MainMenu.cs" t="Include" />
+            <e p="MenuManager.cs" t="Include" />
+            <e p="startAnimation.cs" t="Include" />
+          </e>
+        </e>
+        <e p="siblingruletiles.cs" t="Include" />
+        <e p="TextMesh Pro" t="Include">
+          <e p="Fonts" t="Include">
+            <e p="LiberationSans - OFL.txt" t="Include" />
+          </e>
+          <e p="Resources" t="Include">
+            <e p="LineBreaking Following Characters.txt" t="Include" />
+            <e p="LineBreaking Leading Characters.txt" t="Include" />
+            <e p="Shaders" t="Include">
+              <e p="TMP_Bitmap-Custom-Atlas.shader" t="Include" />
+              <e p="TMP_Bitmap-Mobile.shader" t="Include" />
+              <e p="TMP_Bitmap.shader" t="Include" />
+              <e p="TMP_SDF Overlay.shader" t="Include" />
+              <e p="TMP_SDF-Mobile Masking.shader" t="Include" />
+              <e p="TMP_SDF-Mobile Overlay.shader" t="Include" />
+              <e p="TMP_SDF-Mobile.shader" t="Include" />
+              <e p="TMP_SDF-Surface-Mobile.shader" t="Include" />
+              <e p="TMP_SDF-Surface.shader" t="Include" />
+              <e p="TMP_SDF.shader" t="Include" />
+              <e p="TMP_Sprite.shader" t="Include" />
+              <e p="TMPro.cginc" t="Include" />
+              <e p="TMPro_Properties.cginc" t="Include" />
+              <e p="TMPro_Surface.cginc" t="Include" />
+            </e>
+          </e>
+          <e p="Sprites" t="Include">
+            <e p="EmojiOne Attribution.txt" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Quaranteam.sln" t="IncludeFlat" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+      <e p="Unity.2D.Tilemap.Extras.csproj" t="IncludeRecursive" />
+      <e p="Unity.2D.Tilemap.Extras.Editor.csproj" t="IncludeRecursive" />
+      <e p="Unity.2D.Tilemap.Extras.Placeholder.EditorTests.csproj" t="IncludeRecursive" />
+    </e>
+  </component>
+</project>
