@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 967097207452989374}
   - component: {fileID: 5123652081787441359}
   - component: {fileID: 6636033620214406480}
-  - component: {fileID: 834724828244166554}
   m_Layer: 0
   m_Name: StarBigger
   m_TagString: Untagged
@@ -248,17 +247,3 @@ MonoBehaviour:
   points: 1
   balls:
   - {fileID: 5446223020989089798, guid: f66d00462a8ab2a499487b711d6047e0, type: 3}
---- !u!114 &834724828244166554
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6592646113935770617}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38abe984841c4c047a475c9b6017d31f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  activateDeath: 1
-  secondsToDie: 3

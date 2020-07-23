@@ -745,7 +745,7 @@ Transform:
   m_Children:
   - {fileID: 2118500632}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &177267700
 GameObject:
@@ -2811,7 +2811,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 167605009}
   cantPoints: 0
-  nextLevel: 0
+  nextLevel: 9
   secondsTextEnd: 3
   winnerText: {fileID: 944125105}
   loserText: {fileID: 1171990388}
@@ -2827,7 +2827,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &978634971
 GameObject:
@@ -3748,7 +3748,7 @@ PrefabInstance:
     - target: {fileID: 8349326982895820327, guid: 518be4f12b7778a49a901ac0dc4f2443,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8349326982895820327, guid: 518be4f12b7778a49a901ac0dc4f2443,
         type: 3}
@@ -4544,7 +4544,7 @@ RectTransform:
   - {fileID: 944125106}
   - {fileID: 1171990389}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -5098,7 +5098,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1696741815
 GameObject:
@@ -5216,7 +5216,7 @@ RectTransform:
   - {fileID: 1515787559}
   - {fileID: 978634972}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -6177,7 +6177,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2117338134}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.659921, y: 2.7425625, z: -10}
+  m_LocalPosition: {x: -3.8195891, y: 2.734369, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 838797056}

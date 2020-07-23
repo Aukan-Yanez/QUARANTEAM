@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6310472854627973902}
   - component: {fileID: 6310472854627973901}
   - component: {fileID: 6310472854627973900}
-  - component: {fileID: 6029097552537561768}
+  - component: {fileID: -7494686548432946891}
   m_Layer: 0
   m_Name: DkBarrel
   m_TagString: Untagged
@@ -169,7 +169,7 @@ MonoBehaviour:
   layers:
     serializedVersion: 2
     m_Bits: 1
---- !u!114 &6029097552537561768
+--- !u!114 &-7494686548432946891
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -182,7 +182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activateDeath: 1
-  secondsToDie: 3
+  secondsToDie: 6
 --- !u!1 &6310472855579471956
 GameObject:
   m_ObjectHideFlags: 0

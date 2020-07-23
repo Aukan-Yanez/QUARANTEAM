@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8596244088860035893}
   - component: {fileID: 8596244088860035894}
   - component: {fileID: 8596244088860035895}
-  - component: {fileID: 1896756249254527208}
+  - component: {fileID: -4677470642996057998}
   m_Layer: 0
   m_Name: Plataforma movil
   m_TagString: Untagged
@@ -206,7 +206,7 @@ MonoBehaviour:
     currentX: 0
     currentTime: 0
     waveDirect: 1
---- !u!114 &1896756249254527208
+--- !u!114 &-4677470642996057998
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -219,4 +219,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activateDeath: 1
-  secondsToDie: 3
+  secondsToDie: 6

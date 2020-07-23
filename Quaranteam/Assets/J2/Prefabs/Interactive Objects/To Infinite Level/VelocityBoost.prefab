@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7448508267605009690}
   - component: {fileID: 7448508267605009691}
   - component: {fileID: 7448508267605009688}
-  - component: {fileID: 4642234642562179643}
+  - component: {fileID: -3567495367896130071}
   m_Layer: 0
   m_Name: VelocityBoost
   m_TagString: Untagged
@@ -128,7 +128,7 @@ SurfaceEffector2D:
   m_UseContactForce: 0
   m_UseFriction: 1
   m_UseBounce: 1
---- !u!114 &4642234642562179643
+--- !u!114 &-3567495367896130071
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -141,4 +141,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activateDeath: 1
-  secondsToDie: 3
+  secondsToDie: 6

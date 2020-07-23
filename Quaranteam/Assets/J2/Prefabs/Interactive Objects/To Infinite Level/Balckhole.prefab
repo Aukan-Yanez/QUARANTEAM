@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 7288402051723400217}
   - component: {fileID: 7288402051723400216}
   - component: {fileID: 7288402051723400219}
-  - component: {fileID: 267482611372778541}
+  - component: {fileID: -7719623994398083401}
   m_Layer: 0
   m_Name: Balckhole
   m_TagString: Untagged
@@ -236,7 +236,7 @@ MonoBehaviour:
   layers:
     serializedVersion: 2
     m_Bits: 1
---- !u!114 &267482611372778541
+--- !u!114 &-7719623994398083401
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -249,4 +249,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activateDeath: 1
-  secondsToDie: 3
+  secondsToDie: 6

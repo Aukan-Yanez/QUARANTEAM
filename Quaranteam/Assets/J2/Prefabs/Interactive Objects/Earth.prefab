@@ -69,9 +69,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 12
   m_Sprite: {fileID: 21300000, guid: f9bf223facad365438248ef5b5aab11c, type: 3}
-  m_Color: {r: 0, g: 0.7069087, b: 1, a: 0.40392157}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.6509804}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -224,7 +224,7 @@ MonoBehaviour:
     invertGravity: 0
     gravity: 7
     mass: 150
-    fixHaloSize: 5.2
+    fixHaloSize: 20
   objective:
     checkAll: 0
     checkOne: 1
@@ -234,7 +234,7 @@ MonoBehaviour:
     - {fileID: 0}
     - {fileID: 0}
     checkInRange: 0
-    attractionRange: 3
+    attractionRange: 20
   layers:
     serializedVersion: 2
     m_Bits: 1

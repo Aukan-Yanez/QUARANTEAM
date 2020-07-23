@@ -154,7 +154,7 @@ GameObject:
   - component: {fileID: 1891176932439172863}
   - component: {fileID: 1891176932439172848}
   - component: {fileID: 1891176932439172849}
-  - component: {fileID: 634054398367582823}
+  - component: {fileID: -42703423114252411}
   m_Layer: 0
   m_Name: LinearGravity
   m_TagString: Untagged
@@ -319,7 +319,7 @@ MonoBehaviour:
     checkInRange: 1
     attractionRangeX: 2.3
     attractionRangeY: 27
---- !u!114 &634054398367582823
+--- !u!114 &-42703423114252411
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -332,4 +332,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activateDeath: 1
-  secondsToDie: 3
+  secondsToDie: 6
