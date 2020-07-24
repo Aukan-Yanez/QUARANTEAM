@@ -23,9 +23,20 @@ public class PauseMenu : MonoBehaviour
 
     void Update()
     {
-        string resumen = Gral_Resume_Anim.gameObject.GetComponent<Animator>().GetCurrentAnimatorClipInfo(0)[0].clip.name;
-        string settings = Gral_Resume_Anim.gameObject.GetComponent<Animator>().GetCurrentAnimatorClipInfo(0)[0].clip.name;
-        string exit = Gral_Resume_Anim.gameObject.GetComponent<Animator>().GetCurrentAnimatorClipInfo(0)[0].clip.name;
+        string resumen = null;
+        string settings = null;
+        string exit = null;
+
+        if (Gral_Resume_Anim.gameObject.GetComponent<Animator>().GetCurrentAnimatorClipInfo(0) != null)
+        {
+            if (Gral_Resume_Anim.gameObject.GetComponent<Animator>().GetCurrentAnimatorClipInfo(0).Length != 0)
+            {
+                resumen = Gral_Resume_Anim.gameObject.GetComponent<Animator>().GetCurrentAnimatorClipInfo(0)[0].clip.name;
+                settings = Gral_Resume_Anim.gameObject.GetComponent<Animator>().GetCurrentAnimatorClipInfo(0)[0].clip.name;
+                exit = Gral_Resume_Anim.gameObject.GetComponent<Animator>().GetCurrentAnimatorClipInfo(0)[0].clip.name;
+            }
+        }
+
 
         if (resumen == "Highlighted" || settings == "Highlighted" || exit == "Highlighted")
         {

@@ -291,6 +291,8 @@ public class DmComponents
     [Tooltip("Componente Collider2D del objeto que puede ser dañado.")]
     public Collider2D objectCollider2D;
     public Animator deathAnimator;
+
+
 }
 
 

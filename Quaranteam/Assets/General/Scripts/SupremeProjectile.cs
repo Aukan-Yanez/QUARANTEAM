@@ -25,6 +25,7 @@ public class SupremeProjectile : MonoBehaviour
     private bool wasDragged = false;
     private Buscar utils = new Buscar();
     private Vector2 pushingForce;
+    private bool flying = true;
     [HideInInspector]
     public float timeInGravityField = 5;
     private float initGrav = 0;
@@ -59,7 +60,9 @@ public class SupremeProjectile : MonoBehaviour
             }
         }
 
-        projectile.doPersonalizedBehavior(this.gameObject); //cada proyectil puede sobreescribir este metodo "a su modo"  
+        projectile.doPersonalizedBehavior(this.gameObject); //cada proyectil puede sobreescribir este metodo "a su modo" 
+
+        checkGround();
     }
     private void FixedUpdate()
     {
@@ -99,6 +102,38 @@ public class SupremeProjectile : MonoBehaviour
             }
         }
     }
+
+    private void checkGround()
+    {
+        if (components.landingPlatforms != null && components.landingPlatforms.Length != 0)
+        {
+            if (flying)
+            {
+                foreach (GameObject ground in components.landingPlatforms)
+                {
+                    if (ground != null)
+                    {
+                        Collider2D hasCollider = ground.GetComponent<Collider2D>();
+                        if (hasCollider)
+                        {
+                            if (components.rigidbody2D.IsTouching(hasCollider))
+                            {
+                                flying = false;
+                                components.animDef.SetBool("land", true);
+                            }
+                        }
+                    }
+                }
+            }
+            else
+            {
+                components.animDef.SetBool("land", false);
+                components.animDef.SetBool("Normal", true);
+            }
+        }
+    }
+
+
     #endregion
 
     #region set up
@@ -402,6 +437,10 @@ public class ProjectileComponents
     public LineRenderer lineRenderer;
     [Header("Animation")]
     public Animator animator;
+
+    //New stuff
+    public Animator animDef;
+    public GameObject[] landingPlatforms;
 }
 
 [System.Serializable]

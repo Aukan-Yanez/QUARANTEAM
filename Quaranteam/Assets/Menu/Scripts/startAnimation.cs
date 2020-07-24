@@ -28,9 +28,33 @@ public class startAnimation : MonoBehaviour
 
     void Update()
     {
-        string J1 = ButtonGame1.GetComponent<Animator>().GetCurrentAnimatorClipInfo(0)[0].clip.name;
-        string J2 = ButtonGame2.GetComponent<Animator>().GetCurrentAnimatorClipInfo(0)[0].clip.name;
-        string J3 = ButtonGame3.GetComponent<Animator>().GetCurrentAnimatorClipInfo(0)[0].clip.name;
+        string J1 = null;
+        string J2 = null;
+        string J3 = null;
+
+        if (ButtonGame1.GetComponent<Animator>().GetCurrentAnimatorClipInfo(0) != null)
+        {
+            if(ButtonGame1.GetComponent<Animator>().GetCurrentAnimatorClipInfo(0).Length != 0)
+            {
+                J1 = ButtonGame1.GetComponent<Animator>().GetCurrentAnimatorClipInfo(0)[0].clip.name;
+            }
+        }
+        if (ButtonGame2.GetComponent<Animator>().GetCurrentAnimatorClipInfo(0) != null)
+        {
+            if (ButtonGame2.GetComponent<Animator>().GetCurrentAnimatorClipInfo(0).Length != 0)
+            {
+                J2 = ButtonGame2.GetComponent<Animator>().GetCurrentAnimatorClipInfo(0)[0].clip.name;
+            }
+        }
+        if (ButtonGame3.GetComponent<Animator>().GetCurrentAnimatorClipInfo(0) != null)
+        {
+            if (ButtonGame3.GetComponent<Animator>().GetCurrentAnimatorClipInfo(0).Length != 0)
+            {
+                J3 = ButtonGame3.GetComponent<Animator>().GetCurrentAnimatorClipInfo(0)[0].clip.name;
+            }
+        }
+
+
 
         if (J1 == "Highlighted")
         {
