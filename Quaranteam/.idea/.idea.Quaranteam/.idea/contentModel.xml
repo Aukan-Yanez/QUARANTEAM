@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Users\fabi_\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\fabi_\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_Quaranteam.-2144224012.00" t="ExcludeRecursive" />
-    <e p="D:\Notebook\Documentos\GitHub\QT\Quaranteam" t="IncludeRecursive">
+    <e p="C:\Users\fabi_\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_Quaranteam.-773119424.00" t="ExcludeRecursive" />
+    <e p="D:\Notebook\Documentos\GitHub\QT-Pluss\Quaranteam" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="2d-extras-master" t="Include">
@@ -111,6 +111,7 @@
         </e>
         <e p="General" t="Include">
           <e p="Scripts" t="Include">
+            <e p="Animations.cs" t="Include" />
             <e p="BlackholeDef.cs" t="Include" />
             <e p="Buscar.cs" t="Include" />
             <e p="CameraManager.cs" t="Include" />
@@ -124,6 +125,7 @@
             <e p="LineargravityDef.cs" t="Include" />
             <e p="MobileplatformDef.cs" t="Include" />
             <e p="Movement.cs" t="Include" />
+            <e p="ParticlesLight.cs" t="Include" />
             <e p="PlayermovementDef.cs" t="Include" />
             <e p="Portal.cs" t="Include" />
             <e p="ProjectileDef.cs" t="Include" />
@@ -131,6 +133,7 @@
             <e p="SidetoSide.cs" t="Include" />
             <e p="Slots.cs" t="Include" />
             <e p="SupremeProjectile.cs" t="Include" />
+            <e p="TestAnimController.cs" t="Include" />
           </e>
         </e>
         <e p="J1" t="Include">
@@ -158,6 +161,7 @@
             <e p="ChangePriorityCam.cs" t="Include" />
             <e p="CheckPoint.cs" t="Include" />
             <e p="CoinMecanics.cs" t="Include" />
+            <e p="Desactivator.cs" t="Include" />
             <e p="DetectVictory.cs" t="Include" />
             <e p="FollowAxisX.cs" t="Include" />
             <e p="FollowMouse.cs" t="Include" />
@@ -170,8 +174,11 @@
             <e p="MovementAtoB.cs" t="Include" />
             <e p="PauseOptions.cs" t="Include" />
             <e p="RotateCanyon.cs" t="Include" />
+            <e p="Rotation.cs" t="Include" />
+            <e p="Run.cs" t="Include" />
             <e p="SecondsToDie.cs" t="Include" />
             <e p="StarsCount.cs" t="Include" />
+            <e p="Timer.cs" t="Include" />
             <e p="Vaiven.cs" t="Include" />
           </e>
         </e>

@@ -5,16 +5,23 @@ using UnityEngine.SceneManagement;
 
 public class GameManagerJ2 : MonoBehaviour
 {
-    public GameObject player;
+    public GameObject playerrr;
     public int cantPoints;
     public int nextLevel;
     public float secondsTextEnd = 3.0f;
     public GameObject winnerText;
     public GameObject loserText;
+    public float time = 60f;
     // Start is called before the first frame update
     void Start()
     {
         cantPoints = 0;
+        print("help");
+    }
+
+    public float GetTime()
+    {
+        return time;
     }
 
 
@@ -62,9 +69,15 @@ public class GameManagerJ2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(player.activeInHierarchy == false)
+        time -= Time.deltaTime;
+        if(playerrr.activeInHierarchy == false)
         {
             Lost();
+        }
+
+        if (time < 0.0f)
+        {
+            playerrr.SetActive(false);
         }
     }
 }
