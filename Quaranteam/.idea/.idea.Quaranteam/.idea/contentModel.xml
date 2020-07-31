@@ -173,6 +173,7 @@
             <e p="LinearGravity.cs" t="Include" />
             <e p="MovementAtoB.cs" t="Include" />
             <e p="PauseOptions.cs" t="Include" />
+            <e p="ReboundSound.cs" t="Include" />
             <e p="RotateCanyon.cs" t="Include" />
             <e p="Rotation.cs" t="Include" />
             <e p="Run.cs" t="Include" />
@@ -193,6 +194,7 @@
           <e p="Scripts" t="Include">
             <e p="MainMenu.cs" t="Include" />
             <e p="MenuManager.cs" t="Include" />
+            <e p="Scoreboard.cs" t="Include" />
             <e p="startAnimation.cs" t="Include" />
           </e>
         </e>

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,7 +8,7 @@ public class CoinMecanics : MonoBehaviour
     public int points = 1;
     public GameObject[] balls;
 
-    private void Start()
+    private void Awake()
     {
         if(balls.Length == 0)
         {

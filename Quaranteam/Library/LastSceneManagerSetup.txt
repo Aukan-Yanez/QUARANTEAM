@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/J2/Sceness/J2-5.unity
+- path: Assets/J2/Sceness/Level_infinite.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
