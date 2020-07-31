@@ -189,7 +189,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\xBFSeguro quieres\nsalir?"
+  m_Text: "\xBFExit?"
 --- !u!222 &77412376
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1680,7 +1680,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.047169805, g: 0.047169805, b: 0.047169805, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1724,7 +1724,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &617081259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11445,7 +11445,7 @@ Animator:
   m_GameObject: {fileID: 655324900}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 8ba8a8fe4558b774c8c571a2900aff74, type: 2}
+  m_Controller: {fileID: 9100000, guid: d9eae0c4361d0104ca35ac14cb7c7440, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -14533,7 +14533,7 @@ Animator:
   m_GameObject: {fileID: 1417455993}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 420c13c8a59a0764aa3e33e89b8760b1, type: 2}
+  m_Controller: {fileID: 9100000, guid: 97b1f26e5d88b444896d65a859d79588, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -15311,7 +15311,7 @@ Animator:
   m_GameObject: {fileID: 1649461569}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b9ad54eb0061ddc47a2fee21a3631cf5, type: 2}
+  m_Controller: {fileID: 9100000, guid: 47661ce57dae92d439a03089323f4809, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -15469,7 +15469,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!95 &1705097009
 Animator:
   serializedVersion: 3
@@ -15901,7 +15901,7 @@ Animator:
   m_GameObject: {fileID: 1866655145}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: eede7682139241147ae1b8eb845e024e, type: 2}
+  m_Controller: {fileID: 9100000, guid: 03b03a992eef6534cba1b50b13718528, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -21811,7 +21811,7 @@ Animator:
   m_GameObject: {fileID: 1999699199}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d2a3f730d4b71f64db73ec74c8f5ea15, type: 2}
+  m_Controller: {fileID: 9100000, guid: 7daa902478a64d24cb8656a28b59dbd5, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
