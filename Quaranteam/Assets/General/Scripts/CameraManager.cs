@@ -12,6 +12,7 @@ public class CameraManager : MonoBehaviour
     [Range(0,100)]
     public float backgroundVelocityScale = 1f;
     public Transform[] focusOnList;
+    public Transform[] enemyList;
     [Range(0,20)]
     public float minVelToApplyZoom = 5;
     [Range(0, 200)]
@@ -30,6 +31,8 @@ public class CameraManager : MonoBehaviour
     private bool once = false;
     private float prevPosition = 0;
     private float currPosition = 0;
+    private float touchPrevDist = 0;
+    private float touchCurrDist = 0;
     void Start()
     {
         prevPosition = cam.transform.position.x;
@@ -110,20 +113,61 @@ public class CameraManager : MonoBehaviour
 
     private void moveBackgorundToo()
     {
-        currPosition = cam.transform.position.x;
-
-
-        if (currPosition > prevPosition)
+        if (background != null)
         {
-            background.position = new Vector2(background.position.x + (prevPosition - currPosition) * backgroundVelocityScale / 100, background.position.y);
-        }
-        if (currPosition < prevPosition)
-        {
-            background.position = new Vector2(background.position.x + (prevPosition - currPosition) * backgroundVelocityScale / 100, background.position.y);
-        }
+            currPosition = cam.transform.position.x;
 
-        prevPosition = currPosition;
+            if (currPosition > prevPosition)
+            {
+                background.position = new Vector2(background.position.x + (prevPosition - currPosition) * backgroundVelocityScale / 100, background.position.y);
+            }
+            if (currPosition < prevPosition)
+            {
+                background.position = new Vector2(background.position.x + (prevPosition - currPosition) * backgroundVelocityScale / 100, background.position.y);
+            }
+
+            prevPosition = currPosition;
+        }
     }
 
+
+    private void scroll()
+    {
+        Touch[] touches = Input.touches;
+        if (Input.touchCount == 2)
+        {
+            for (int i = 0; i < Input.touchCount; i++)
+            {
+                if (touchCurrDist == 0 && touchPrevDist == 0)
+                {
+                    touchCurrDist = (touches[0].position - touches[1].position).magnitude;
+                    touchPrevDist = (touches[0].position - touches[1].position).magnitude;
+                }
+                else
+                {
+                    touchCurrDist = (touches[0].position - touches[1].position).magnitude;
+                    if (touchCurrDist < touchPrevDist)
+                    {
+                        //menos zoom (se aleja la camara)
+                        if (cam.m_Lens.OrthographicSize < maxZoom)
+                        {
+                            cam.m_Lens.OrthographicSize += zoomSmoothedOut;
+                        }
+                        touchPrevDist = touchCurrDist;
+                    }
+                    if (touchCurrDist > touchPrevDist)
+                    {
+                        //más zoom (se acerca la camara)
+                        if (cam.m_Lens.OrthographicSize > minZoom)
+                        {
+                            cam.m_Lens.OrthographicSize -= zoomSmoothedIn;
+                        }
+                        touchPrevDist = touchCurrDist;
+                    }
+                }
+            }
+        }
+        
+    }
 
 }
