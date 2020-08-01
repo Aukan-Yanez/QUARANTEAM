@@ -4,33 +4,31 @@ using UnityEngine;
 
 public class SecondsToDie : MonoBehaviour
 {
-    public bool activateDeath = true;
+    public bool Destroy = true;
     public float secondsToDie = 5.0f;
     // Start is called before the first frame update
     void Start()
     {
-        if (activateDeath)
-        {
-            StartCoroutine(Death());
-        }
+        StartCoroutine(Death());
     }
 
     IEnumerator Death()
     {
-        //Wait 1 second
+        //Wait seconds
         yield return StartCoroutine(Wait(secondsToDie));
         //Do process stuff
-        Destroy(this.gameObject);
+        if (Destroy)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            gameObject.SetActive(false);
+        }
     }
 
     IEnumerator Wait(float seconds)
     {
         yield return new WaitForSeconds(seconds);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
