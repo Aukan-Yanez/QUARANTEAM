@@ -7,16 +7,12 @@ public class MovementAtoB : MonoBehaviour
 {
     [Header("Guide Points")]
     public GameObject[] points;
-    
     [Header("Speed")]
     public float speed = 1f;
-    
     [Header("Loop")]
     public bool activateLoop = false;
-    
     [Header("Die when finished")]
     public bool dieInEnd = false;
-    
 
     private float step;
     private bool inPoint;
@@ -37,7 +33,6 @@ public class MovementAtoB : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
         if (!inPoint) // aun no llega al punto
         {
             transform.position = Vector3.MoveTowards(transform.position, nextPoint.transform.position, step);
