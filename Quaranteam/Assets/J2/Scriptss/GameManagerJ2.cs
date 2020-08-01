@@ -1,25 +1,44 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManagerJ2 : MonoBehaviour
 {
-    public GameObject player;
-    public int cantPoints;
-    public int nextLevel;
+    [Header("Level Settings")]
+    public string level;
+    public float time = 60f;
+    public GameObject playerrr;
+    public int nextLevelIndex;
+    [Header("Music")]
+    private AudioSource dropStar;
+    [HideInInspector]
+    AudioSource lossMusic;
+    [Header("Text End Level")]
     public float secondsTextEnd = 3.0f;
     public GameObject winnerText;
     public GameObject loserText;
-    // Start is called before the first frame update
-    void Start()
+
+    [HideInInspector] public int cantPoints;
+
+    [HideInInspector] private bool timer = true;
+
+    private void Awake()
     {
-        cantPoints = 0;
+        dropStar = GetComponent<AudioSource>();
+        
+    }
+
+    public float GetTime()
+    {
+        return time;
     }
 
 
     public void CapturedCoins(int points)
     {
+        dropStar.Play();
         cantPoints += points;
     }
     
@@ -33,7 +52,7 @@ public class GameManagerJ2 : MonoBehaviour
         winnerText.SetActive(true);
         yield return new WaitForSeconds(secondsTextEnd);
         
-        SceneManager.LoadScene(nextLevel);
+        SceneManager.LoadScene(nextLevelIndex);
     }
 
     IEnumerator lostGame()
@@ -44,13 +63,27 @@ public class GameManagerJ2 : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    public void finishGame()
+    private void updateScore()
     {
-        SceneManager.LoadScene(0);
+        string nameKey = "lvl" + level;
+        Debug.Log("GM "+ PlayerPrefs.HasKey(nameKey));
+        if (PlayerPrefs.HasKey(nameKey))
+        {
+            if (PlayerPrefs.GetInt(nameKey) < cantPoints)
+            {
+                PlayerPrefs.SetInt(nameKey, cantPoints);
+            }
+        }
+        else
+        {
+            PlayerPrefs.SetInt(nameKey, cantPoints);
+        }
+        Debug.Log(nameKey + " " + PlayerPrefs.GetInt(nameKey).ToString());
     }
 
     public void Win()
     {
+        updateScore();
         StartCoroutine("winGame");
     }
 
@@ -58,13 +91,32 @@ public class GameManagerJ2 : MonoBehaviour
     {
         StartCoroutine("lostGame");
     }
+    
+    // Start is called before the first frame update
+    void Start()
+    {
+        cantPoints = 0;
+        if (time == 0f)
+        {
+            timer = false;
+        }
+    }
 
     // Update is called once per frame
     void Update()
     {
-        if(player.activeInHierarchy == false)
+        if (timer)
+        {
+            time -= Time.deltaTime;
+        }
+        if(playerrr.activeInHierarchy == false)
         {
             Lost();
+        }
+
+        if (time < 0.0f)
+        {
+            playerrr.SetActive(false);
         }
     }
 }
