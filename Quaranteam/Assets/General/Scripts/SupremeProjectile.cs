@@ -25,10 +25,17 @@ public class SupremeProjectile : MonoBehaviour
     private bool wasDragged = false;
     private Buscar utils = new Buscar();
     private Vector2 pushingForce;
-    private bool flying = true;
     [HideInInspector]
     public float timeInGravityField = 5;
     private float initGrav = 0;
+
+    private bool flying = true;
+    private bool firstJump = false;
+    private bool secondJump = false;
+    private bool curr = false;
+    private bool prev = false;
+    public Vector2 desfase;
+    //public Transform feet;
 
     #endregion
     #endregion
@@ -62,7 +69,7 @@ public class SupremeProjectile : MonoBehaviour
 
         projectile.doPersonalizedBehavior(this.gameObject); //cada proyectil puede sobreescribir este metodo "a su modo" 
 
-        checkGround();
+        
     }
     private void FixedUpdate()
     {
@@ -70,6 +77,7 @@ public class SupremeProjectile : MonoBehaviour
         reduceLifeTime();
         animateIfDoesDamage();
         checkOwnGravity();
+        normalAnimation();
     }
 
     private void checkOwnGravity()
@@ -103,32 +111,47 @@ public class SupremeProjectile : MonoBehaviour
         }
     }
 
-    private void checkGround()
+    private void normalAnimation()
     {
-        if (components.landingPlatforms != null && components.landingPlatforms.Length != 0)
+        if(components.animator != null) // si tiene los componentes necesarios
         {
-            if (flying)
+            if (flying)//Si esta en el aire
             {
-                foreach (GameObject ground in components.landingPlatforms)
+                Vector2 centro = components.rigidbody2D.position + desfase;
+                Collider2D coll = Physics2D.OverlapBox(centro, new Vector2(1, 0.5f),0);//Se obtiene el collider que este debajo del proyectil
+                if(coll != null ) //Si hay un collider
                 {
-                    if (ground != null)
+                    //if (coll.name != components.collider2D.name)
                     {
-                        Collider2D hasCollider = ground.GetComponent<Collider2D>();
-                        if (hasCollider)
+                        if (!firstJump && !curr) //Si no realizo la primera animacion de rebotar, la hace 
                         {
-                            if (components.rigidbody2D.IsTouching(hasCollider))
+                            components.animator.SetBool("firstJump", true);
+                            firstJump = true;
+                        }
+                        else 
+                        {
+                            if (!secondJump && !curr)//Si no, si no ha hecho la segunda animacion de rebotar, la hace
                             {
+                                components.animator.SetBool("firstJump", false);
+                                components.animator.SetBool("secondJump", true);
+                                secondJump = true;
+                            }
+                            else//Si no, ya no esta en el aire por lo que no rebotará.
+                            {
+                                components.animator.SetBool("secondJump", false);
+                                components.animator.SetBool("landing", true);
                                 flying = false;
-                                components.animDef.SetBool("land", true);
                             }
                         }
                     }
+                    curr = true;
                 }
-            }
-            else
-            {
-                components.animDef.SetBool("land", false);
-                components.animDef.SetBool("Normal", true);
+                else
+                {
+                    if (curr == true && coll == null){
+                        curr = false;
+                    }
+                }
             }
         }
     }
@@ -394,19 +417,16 @@ public class SupremeProjectile : MonoBehaviour
             Gizmos.color = Color.blue;
             Gizmos.DrawWireSphere(components.hookRigidbody2D.position, properties.maxRadiusToLaunch);
         }
-
         if (properties.projectileType == ProjectileProperties.ProjectileType.Kirby)
         {
             Gizmos.color = Color.magenta;
             Gizmos.DrawWireSphere(components.rigidbody2D.position, properties.kirby.swallowRadius);
         }
-
         if (properties.projectileType == ProjectileProperties.ProjectileType.Spin)
         {
             Gizmos.color = Color.magenta;
             Gizmos.DrawWireSphere(components.rigidbody2D.position, properties.spin.radiusEffect);
         }
-
         if (properties.projectileType == ProjectileProperties.ProjectileType.Bomb)
         {
             Gizmos.color = Color.magenta;
@@ -416,6 +436,12 @@ public class SupremeProjectile : MonoBehaviour
         {
             Gizmos.color = Color.magenta;
             Gizmos.DrawWireSphere(components.rigidbody2D.position, properties.expand.currentRadius);
+        }
+
+        if (components.animator != null)
+        {
+            Vector2 centro = components.rigidbody2D.position + desfase;
+            Gizmos.DrawWireCube(new Vector3(centro.x, centro.y,0), new Vector3(1, 0.5f, 0));
         }
 
     }

@@ -814,6 +814,7 @@ MonoBehaviour:
   inmortal: 0
   dotList: []
   timeInGravityField: 5
+  desfase: {x: 0, y: 0}
 --- !u!95 &168304977
 Animator:
   serializedVersion: 3
@@ -866,9 +867,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.2680738}
+  m_Offset: {x: 0, y: 0.013721108}
   serializedVersion: 2
-  m_Radius: 0.86736035
+  m_Radius: 0.58556545
 --- !u!50 &168304980
 Rigidbody2D:
   serializedVersion: 4
@@ -1183,7 +1184,7 @@ MonoBehaviour:
     hookRigidbody2D: {fileID: 2053878899}
     elasticCord: {fileID: 278809610}
     lineRenderer: {fileID: 0}
-    animator: {fileID: 0}
+    animator: {fileID: 278809609}
     animDef: {fileID: 278809609}
     landingPlatforms:
     - {fileID: 602843805}
@@ -1252,6 +1253,7 @@ MonoBehaviour:
   inmortal: 0
   dotList: []
   timeInGravityField: 5
+  desfase: {x: 0, y: -0.86}
 --- !u!95 &278809609
 Animator:
   serializedVersion: 3
@@ -1262,7 +1264,7 @@ Animator:
   m_GameObject: {fileID: 278809607}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d01b5160d2ad2d44080592e24d63d794, type: 2}
+  m_Controller: {fileID: 9100000, guid: 3ff831e244bca1846bc0651952782253, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1304,9 +1306,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.2680738}
+  m_Offset: {x: 0, y: 0.0076680183}
   serializedVersion: 2
-  m_Radius: 0.86736035
+  m_Radius: 0.59161854
 --- !u!50 &278809612
 Rigidbody2D:
   serializedVersion: 4
@@ -8053,6 +8055,7 @@ MonoBehaviour:
   inmortal: 0
   dotList: []
   timeInGravityField: 5
+  desfase: {x: 0, y: 0}
 --- !u!95 &1053454671
 Animator:
   serializedVersion: 3
@@ -8871,6 +8874,7 @@ MonoBehaviour:
   inmortal: 0
   dotList: []
   timeInGravityField: 5
+  desfase: {x: 0, y: 0}
 --- !u!231 &1115058532
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -14971,6 +14975,7 @@ MonoBehaviour:
   inmortal: 0
   dotList: []
   timeInGravityField: 5
+  desfase: {x: 0, y: 0}
 --- !u!95 &1828562344
 Animator:
   serializedVersion: 3
@@ -15023,9 +15028,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.2680738}
+  m_Offset: {x: 0, y: 0.016807556}
   serializedVersion: 2
-  m_Radius: 0.86736035
+  m_Radius: 0.582479
 --- !u!50 &1828562347
 Rigidbody2D:
   serializedVersion: 4
@@ -15258,6 +15263,7 @@ MonoBehaviour:
   inmortal: 0
   dotList: []
   timeInGravityField: 5
+  desfase: {x: 0, y: 0}
 --- !u!95 &1832766526
 Animator:
   serializedVersion: 3
@@ -21089,6 +21095,7 @@ MonoBehaviour:
   inmortal: 0
   dotList: []
   timeInGravityField: 5
+  desfase: {x: 0, y: 0}
 --- !u!95 &2042898903
 Animator:
   serializedVersion: 3
