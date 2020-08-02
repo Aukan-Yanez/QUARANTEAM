@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -374,15 +374,15 @@ RectTransform:
   m_GameObject: {fileID: 103239070}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.1558447, y: 4.1558447, z: 4.1558447}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 858241447}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -207.79222, y: -62.33767}
-  m_SizeDelta: {x: 100, y: 30}
+  m_AnchoredPosition: {x: -1686.5, y: -122}
+  m_SizeDelta: {x: 352.6721, y: 64.599976}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &103239072
 MonoBehaviour:
@@ -404,11 +404,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 45
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
+    m_MinSize: 4
+    m_MaxSize: 45
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -1730,15 +1730,15 @@ RectTransform:
   m_GameObject: {fileID: 404837582}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.1558447, y: 4.1558447, z: 4.1558447}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 858241447}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 207.79222, y: -62.33767}
-  m_SizeDelta: {x: 100, y: 30}
+  m_AnchoredPosition: {x: 210.41, y: -50.077}
+  m_SizeDelta: {x: 306.5286, y: 53.954727}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &404837584
 MonoBehaviour:
@@ -1760,11 +1760,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 45
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
+    m_MinSize: 4
+    m_MaxSize: 45
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -4615,7 +4615,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1047680386
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6430,7 +6430,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1382169787
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7026,7 +7026,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58effabb7ecd8784cb52dfca7b5be677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectsCounter: {fileID: 0}
+  objectsCounter: {fileID: 103239072}
   message: 'Enemies: '
   disposeMode: 0
   slots:
@@ -13985,7 +13985,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58effabb7ecd8784cb52dfca7b5be677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectsCounter: {fileID: 0}
+  objectsCounter: {fileID: 404837584}
   message: 'Life: '
   disposeMode: 0
   slots:
