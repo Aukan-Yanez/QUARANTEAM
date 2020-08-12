@@ -26,13 +26,16 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene(scene);
     }
+    public void saveCharacter(int index)
+    {
+        PlayerPrefs.SetInt("character", index);
+    }
 
     public void exitGame()
     {
         Application.Quit();
         Debug.Log("Exit");
     }
-    
     public void showSettingFromMenu()
     {
         if (!isMenu)
@@ -67,7 +70,6 @@ public class MainMenu : MonoBehaviour
         }
 
     }
-
     public void Back()
     {
         Settings.SetActive(false);

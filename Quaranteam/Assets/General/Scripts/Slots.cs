@@ -12,15 +12,44 @@ public class Slots : MonoBehaviour
              "Linear: inicia con todos los elementos de la lista activados. Luego va descontando todos los objetos que esten muertos")]
     public Mode disposeMode = Mode.Iterative;
     public Rigidbody2D[] slots;
+
+    public GameObject vida1;
+    public GameObject vida2;
+    public GameObject vida3;
+
+    public Sprite charizard;
+    public Sprite iceClimber;
+    public Sprite pikachu;
     
+
     private int indiceObjective = 0;
     void Start()
-    {
+    {       
         setUp();
         if (objectsCounter != null)
         {
             objectsCounter.text = message + slots.Length.ToString();
         }
+        int actCharacter = PlayerPrefs.GetInt("character");
+        if(actCharacter == 0)
+        {
+            vida1.GetComponent<Image>().sprite = charizard;
+            vida2.GetComponent<Image>().sprite = charizard;
+            vida3.GetComponent<Image>().sprite = charizard;
+        }
+        if (actCharacter == 1)
+        {
+            vida1.GetComponent<Image>().sprite = iceClimber;
+            vida2.GetComponent<Image>().sprite = iceClimber;
+            vida3.GetComponent<Image>().sprite = iceClimber;
+        }
+        if (actCharacter == 2)
+        {
+            vida1.GetComponent<Image>().sprite = pikachu;
+            vida2.GetComponent<Image>().sprite = pikachu;
+            vida3.GetComponent<Image>().sprite = pikachu;
+        }
+
     }
 
     // Update is called once per frame
@@ -57,6 +86,22 @@ public class Slots : MonoBehaviour
                 if (objectsCounter != null)
                 {
                     objectsCounter.text = message + (slots.Length - indiceObjective).ToString();
+                    int vida = slots.Length - indiceObjective;
+                    if(vida == 2)
+                    {
+                        Debug.Log("Le quedan 2 Vidas");
+                        vida3.SetActive(false);
+                    }
+                    if(vida == 1)
+                    {
+                        Debug.Log("Le quedan 1 Vidas");
+                        vida2.SetActive(false);
+                    }
+                    if (vida == 0)
+                    {
+                        Debug.Log("Le quedan 0 Vidas");
+                        vida1.SetActive(false);
+                    }
                 }
             }
         }

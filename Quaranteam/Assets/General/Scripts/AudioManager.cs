@@ -1,12 +1,12 @@
 ﻿using UnityEngine.Audio;
 using UnityEngine;
-
+using UnityEngine.UI;
 
 public class AudioManager : MonoBehaviour
 {
     public string testAudioName = "default";
     public Sound[] sounds;
-    //slider object
+    public Slider volume;
 
     private void Awake()
     {
@@ -19,6 +19,8 @@ public class AudioManager : MonoBehaviour
             s.audioSource.loop = s.loop;
         }
         play(testAudioName);
+        sounds[0].audioSource.volume = PlayerPrefs.GetFloat("gralVolume");
+        volume.value = PlayerPrefs.GetFloat("gralVolume");
     }
     public void play(string name)
     {
@@ -42,6 +44,7 @@ public class AudioManager : MonoBehaviour
         foreach (Sound s in sounds)
         {
             s.volume = newVolume;
+            PlayerPrefs.SetFloat("gralVolume",newVolume);
         }
     }
 }
