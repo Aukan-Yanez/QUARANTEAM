@@ -6578,6 +6578,7 @@ MonoBehaviour:
     pitch: 1
     audioSource: {fileID: 0}
     loop: 1
+  volume: {fileID: 1711636396}
 --- !u!82 &551278818
 AudioSource:
   m_ObjectHideFlags: 0
@@ -12117,7 +12118,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 551278817}
         m_MethodName: setVolume
         m_Mode: 0
         m_Arguments:

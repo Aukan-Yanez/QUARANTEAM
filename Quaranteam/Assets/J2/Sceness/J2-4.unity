@@ -446,7 +446,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2104906316}
         m_MethodName: setVolume
         m_Mode: 0
         m_Arguments:
@@ -7190,7 +7190,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 708624661}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -19.50605, y: 0.34502885, z: -10}
+  m_LocalPosition: {x: -19.510414, y: 0.34502885, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 678726303}
@@ -13515,6 +13515,7 @@ MonoBehaviour:
     pitch: 1
     audioSource: {fileID: 0}
     loop: 1
+  volume: {fileID: 159123524}
 --- !u!82 &2104906317
 AudioSource:
   m_ObjectHideFlags: 0
@@ -13689,7 +13690,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2117338134}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.1640997, y: -0.061730005, z: -10}
+  m_LocalPosition: {x: -6.1489534, y: -0.06288109, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 838797056}

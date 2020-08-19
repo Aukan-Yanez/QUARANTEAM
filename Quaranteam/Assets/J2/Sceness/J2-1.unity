@@ -1657,6 +1657,37 @@ Transform:
   m_Father: {fileID: 744035876}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &450975005
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 99773446}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 450975006}
+  m_Layer: 0
+  m_Name: Trampoline (Missing Prefab)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &450975006
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 99773446}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 450975005}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1187666093}
+  m_Father: {fileID: 1413711045}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &465150325
 GameObject:
   m_ObjectHideFlags: 0
@@ -4388,6 +4419,7 @@ MonoBehaviour:
     pitch: 1
     audioSource: {fileID: 0}
     loop: 1
+  volume: {fileID: 1970199093}
 --- !u!1 &986523753
 GameObject:
   m_ObjectHideFlags: 0
@@ -5057,12 +5089,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!4 &1187666093 stripped
+--- !u!4 &1187666093
 Transform:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 2460803843254062699, guid: 3d635015ac51a7a40b061ce2ee0635b0,
     type: 3}
   m_PrefabInstance: {fileID: 99773446}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2144074947}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 690870920}
+  m_Father: {fileID: 450975006}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1210233377
 GameObject:
   m_ObjectHideFlags: 0
@@ -5584,7 +5626,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1187666093}
+  - {fileID: 450975006}
   m_Father: {fileID: 1700933396}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12264,7 +12306,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 983307186}
         m_MethodName: setVolume
         m_Mode: 0
         m_Arguments:
@@ -12499,7 +12541,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2041021308}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.9919019, y: 1.6496236, z: -10}
+  m_LocalPosition: {x: 1.9973054, y: 1.6496363, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 546186560}
@@ -13219,6 +13261,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &2144074947
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 99773446}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1187666093}
+  m_Layer: 0
+  m_Name: Missing Prefab (Dummy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1001 &1507282648395175483
 PrefabInstance:
   m_ObjectHideFlags: 0

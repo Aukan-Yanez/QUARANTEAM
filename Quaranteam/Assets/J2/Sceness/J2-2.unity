@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1409,7 +1409,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1907241609}
         m_MethodName: setVolume
         m_Mode: 0
         m_Arguments:
@@ -12824,6 +12824,7 @@ MonoBehaviour:
     pitch: 1
     audioSource: {fileID: 0}
     loop: 1
+  volume: {fileID: 150915919}
 --- !u!82 &1907241610
 AudioSource:
   m_ObjectHideFlags: 0
@@ -13150,7 +13151,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1991738793}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.6312323, y: 0.35890183, z: -10}
+  m_LocalPosition: {x: -2.6324406, y: 0.35890183, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1829443529}
