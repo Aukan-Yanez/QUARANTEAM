@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1757585475813682006}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -123.78597, y: -5.5646143, z: 23.803614}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1757585476750764756}
@@ -143,8 +143,8 @@ MonoBehaviour:
     invertBlackhole: 0
     blackholeGravity: 13
     blackholeMass: 20
-    eventHorizon: 3
-    fixHaloSize: 5.1
+    eventHorizon: 7.1
+    fixHaloSize: 12.4
   objective:
     checkAll: 1
     checkOne: 0
