@@ -11974,6 +11974,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointsToWin: 2
   nextSceneIndex: 2
+  currentLevel: 1
   victoria: {fileID: 1969384262}
   derrota: {fileID: 1706998665}
   projectile: {fileID: 0}

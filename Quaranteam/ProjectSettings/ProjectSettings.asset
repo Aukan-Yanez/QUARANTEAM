@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: QuaranTeam
-  productName: 2Games
+  productName: Round Smash
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.1362869, g: 0.10751157, b: 0.1509434, a: 1}
@@ -122,7 +122,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 1.1
+  bundleVersion: 4
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -281,7 +281,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 2f6e46840bec5784fb253edafa9956d6, type: 3}
+      m_Icon: {fileID: 2800000, guid: 75f69858bbc3a4a4fb60bd9ed321051e, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0

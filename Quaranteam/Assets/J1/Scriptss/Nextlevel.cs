@@ -12,6 +12,7 @@ public class Nextlevel : MonoBehaviour
     [Range(0,10)]
     public int pointsToWin = 1;
     public int nextSceneIndex = 2;
+    public int currentLevel;
     public GameObject victoria;
     public GameObject derrota;
     public ProjectileTwo projectile;
@@ -119,7 +120,7 @@ public class Nextlevel : MonoBehaviour
     {
         derrota.SetActive(true);
         yield return new WaitForSeconds(2);
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(currentLevel);
         derrota.SetActive(false);
     }
     IEnumerator animNextLevelWin()
