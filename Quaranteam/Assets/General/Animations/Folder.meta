@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Quaranteam/Assets/General/Animations/Folder.meta
 guid: ec480a0c9c1b810428df21771fd9f21c
+=======
+guid: 5acc3335508803b43842ff5e10523905
+>>>>>>> 66ab2c8a4b703fa3c6b91be4a9ed2db6b723dad9:Quaranteam/Assets/Menu/animation/AnimPause/Settings_Main.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

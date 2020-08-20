@@ -11,11 +11,58 @@ public class MainMenu : MonoBehaviour
     public GameObject MenuGame2;
     public GameObject MenuGame3;
 
+    public GameObject Logo;
+    public GameObject SettText;
+    public GameObject back;
+    public GameObject Sett1;
+    public GameObject Sett2;
+
+    private Animator Logo_anim;
+    private Animator SettText_anim;
+    private Animator Back_anim;
+    private Animator Sett1_anim;
+    private Animator Sett2_anim;
+    
+
     public static bool isMenu = false;
     public static bool isGame1 = false;
     public static bool isGame2 = false;
-    public static bool isGame3 = false;
- 
+
+    private bool isExit;
+    private int tiempo;
+
+    public int nivel;
+
+
+    private void Awake()
+    {
+        Logo_anim = Logo.GetComponent<Animator>();
+        SettText_anim = SettText.GetComponent<Animator>();
+        Back_anim = back.GetComponent<Animator>();
+        Sett1_anim = Sett1.GetComponent<Animator>();
+        Sett2_anim = Sett2.GetComponent<Animator>();
+        isExit = false;
+        tiempo = 0;
+    }
+
+    void FixedUpdate()
+    {
+        if (isExit == true)
+        {
+            tiempo = tiempo + 1;
+        }
+    }
+
+    void Update()
+    {
+        if(tiempo > 80)
+        {
+            Settings.SetActive(false);
+            reset();
+        }
+    }
+
+
 
     public void startGame()
     {
@@ -36,63 +83,54 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
         Debug.Log("Exit");
     }
-    public void showSettingFromMenu()
-    {
-        if (!isMenu)
-        {
-            isMenu = true;
-        }
-    }
 
-    public void showSettingFromGame1()
+    
+
+    public void showSettings()
     {
-        if(!isGame1)
-        {
-            isGame1 = true;
-        }
+        reset();
+        Logo_anim.Play("PauseLogo");
+        SettText_anim.Play("Text");
+        Back_anim.Play("back");
+        Sett1_anim.Play("sett1");
+        Sett2_anim.Play("sett2");
         
     }
 
-    public void showSettingFromGame2()
+    public void exitSettings()
     {
-        if (!isGame2)
-        {
-            isGame2 = true;
-        }
-
+        isExit = true;
+        Logo_anim.Play("PauseLogo2");
+        SettText_anim.Play("Text2");
+        Back_anim.Play("back2");
+        Sett1_anim.Play("sett12");
+        Sett2_anim.Play("sett22");
+        
     }
 
-    public void showSettingFromGame3()
+    public void reset()
     {
-        if (!isGame3)
-        {
-            isGame3 = true;
-        }
-
+        //Debug.Log("RESET");
+        //Debug.Log("TIMER: " + tiempo);
+        isExit = false;
+        tiempo = 0;
     }
-    public void Back()
-    {
-        Settings.SetActive(false);
 
-        if (isMenu)
+    public void levels()
+    {
+        nivel = 4;
+    }
+
+    public void infinity()
+    {
+        nivel = 8;
+    }
+
+    public void starJ2()
+    {
+        if(nivel > 0)
         {
-            isMenu = false;
-            Menu.SetActive(true);
-        }
-        if (isGame1)
-        {
-            isGame1 = false;
-            MenuGame1.SetActive(true);
-        }
-        if (isGame2)
-        {
-            isGame2 = false;
-            MenuGame2.SetActive(true);
-        }
-        if (isGame3)
-        {
-            isGame3 = false;
-            MenuGame3.SetActive(true);
+            SceneManager.LoadScene(nivel);
         }
     }
 }

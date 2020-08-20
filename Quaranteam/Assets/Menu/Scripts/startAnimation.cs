@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
-public class startAnimation : MonoBehaviour, IPointerClickHandler
+public class startAnimation : MonoBehaviour
 {
 
     public GameObject ButtonGame1;
@@ -20,26 +20,54 @@ public class startAnimation : MonoBehaviour, IPointerClickHandler
     private Animator J2_anim;
     private Animator Start_Anim;
 
+    public GameObject charizard;
+    public GameObject iceClimber;
+    public GameObject pikachu;
+
+    private Animator charizard_anim;
+    private Animator iceClimber_anim;
+    private Animator pikachu_anim; 
+
     bool toquesJ1;
     bool toquesJ2;
     bool ocupadoJ1;
     bool ocupadoJ2;
 
+    bool isCharizard;
+    bool isIceClimber;
+    bool isPikachu;
+    bool charizardOcupado;
+    bool iceClimberOcupado;
+    bool pikachuOcupado;
+
     int countJ1;
     int countJ2;
-
-    int tap;
-    PointerEventData eventData;
 
     private void Awake()
     {
         J1_anim = ButtonGame1.GetComponent<Animator>();
         J2_anim = ButtonGame2.GetComponent<Animator>();
         Start_Anim = ButtonStart.GetComponent<Animator>();
+
+        charizard_anim = charizard.GetComponent<Animator>();
+        iceClimber_anim = iceClimber.GetComponent<Animator>();
+        pikachu_anim = pikachu.GetComponent<Animator>();
+
+
         toquesJ1 = false;
         toquesJ2 = false;
+
         ocupadoJ1 = false;
         ocupadoJ2 = false;
+
+        isCharizard = false;
+        isIceClimber = false;
+        isPikachu = false;
+
+        charizardOcupado = false;
+        iceClimberOcupado = false;
+        pikachuOcupado = false;
+
     }
 
     void FixedUpdate()
@@ -74,23 +102,6 @@ public class startAnimation : MonoBehaviour, IPointerClickHandler
                 J2 = ButtonGame2.GetComponent<Animator>().GetCurrentAnimatorClipInfo(0)[0].clip.name;
             }
         }
-        
-        /*if (J1 == "Highlighted")
-        {
-            Start_Anim.Play("StartJ1");
-            //J2_anim.Play("Normal");
-        }
-
-        if (J2 == "Highlighted")
-        {
-            Start_Anim.Play("StartJ2");
-            //J1_anim.Play("Normal");
-        }
-        if (toquesJ1 == true)
-        {
-            Mainmenu.SetActive(false);
-            MenuGame1.SetActive(true);
-        }*/
     }
 
     public void primerToqueJ1()
@@ -114,13 +125,24 @@ public class startAnimation : MonoBehaviour, IPointerClickHandler
 
     public void segundoToqueJ1()
     {
-        Debug.Log("contador J1: " + countJ1);
+        //Debug.Log("contador J1: " + countJ1);
         if (toquesJ1 == true && countJ1 > 30)
         {
             toquesJ1 = false;
-            J1_anim.Play("Normal");
-            Mainmenu.SetActive(false);
+            //J1_anim.Play("Normal");
+            //Mainmenu.SetActive(false);
             MenuGame1.SetActive(true);
+            charizard_anim.Play("First");
+            iceClimber_anim.Play("First1");
+            pikachu_anim.Play("First2");
+
+            isCharizard = false;
+            isIceClimber = false;
+            isPikachu = false;
+            charizardOcupado = false;
+            iceClimberOcupado = false;
+            pikachuOcupado = false;
+
         }
     }
 
@@ -145,29 +167,14 @@ public class startAnimation : MonoBehaviour, IPointerClickHandler
 
     public void segundoToqueJ2()
     {
-        Debug.Log("contador J2: " + countJ2);
+        //Debug.Log("contador J2: " + countJ2);
         if (toquesJ2 == true && countJ2 > 30)
         {
             toquesJ2 = false;
-            J2_anim.Play("Normal");
-            Mainmenu.SetActive(false);
+            //J2_anim.Play("Normal");
+            //Mainmenu.SetActive(false);
             MenuGame2.SetActive(true);
         }
-    }
-
-    public void OnPointerClick(PointerEventData eventData)
-    {
-        tap = eventData.clickCount;
-
-        if (tap == 1)
-        {
-            Debug.Log("Primer Click");
-        }
-        if (tap == 2)
-        {
-            Debug.Log("Segundo Click");
-        }
-
     }
     public void backJ1()
     {
@@ -175,6 +182,9 @@ public class startAnimation : MonoBehaviour, IPointerClickHandler
         J1_anim.Play("Normal");
         countJ1 = 0;
         countJ2 = 0;
+        charizard_anim.Play("Normal");
+        iceClimber_anim.Play("Normal");
+        pikachu_anim.Play("Normal");
     }
     public void backJ2()
     {
@@ -182,5 +192,72 @@ public class startAnimation : MonoBehaviour, IPointerClickHandler
         J2_anim.Play("Normal");
         countJ1 = 0;
         countJ2 = 0;
+    }
+
+    public void primerToqueCharizard()
+    {   
+        if(isCharizard == false)
+        {
+            if(iceClimberOcupado == true)
+            {
+                iceClimber_anim.Play("Normal");
+                iceClimberOcupado = false;
+                isIceClimber = false;
+            }
+            if(pikachuOcupado == true)
+            {
+                pikachu_anim.Play("Normal");
+                pikachuOcupado = false;
+                isPikachu = false;
+            }
+            charizard_anim.Play("Highlighted");
+            charizardOcupado = true;
+            isCharizard = true;
+        }
+        
+    }
+    public void primerToqueIceClimber()
+    {
+        if(isIceClimber == false)
+        {
+            iceClimber_anim.Play("Highlighted");
+            if (charizardOcupado == true)
+            {
+                charizard_anim.Play("Normal");
+                charizardOcupado = false;
+                isCharizard = false;
+                
+            }
+            if (pikachuOcupado == true)
+            {
+                pikachu_anim.Play("Normal");
+                pikachuOcupado = false;
+                isPikachu = false;
+            }
+            iceClimber_anim.Play("Highlighted");
+            iceClimberOcupado = true;
+            isIceClimber = true;
+        }
+    }
+    public void primerToquePikachu()
+    {
+        if(isPikachu == false)
+        {
+            if (charizardOcupado == true)
+            {
+                charizard_anim.Play("Normal");
+                charizardOcupado = false;
+                isCharizard = false;
+            }
+            if (iceClimberOcupado == true)
+            {
+                iceClimber_anim.Play("Normal");
+                iceClimberOcupado = false;
+                isIceClimber = false;
+            }
+            pikachu_anim.Play("Highlighted");
+            pikachuOcupado = true;
+            isPikachu = true;
+        }
     }
 }

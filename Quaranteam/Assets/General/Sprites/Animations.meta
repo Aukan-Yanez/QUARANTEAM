@@ -1,8 +1,14 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Quaranteam/Assets/General/Sprites/Animations.meta
 guid: 357fc6d6da18c294d8f1741d9bfba850
 folderAsset: yes
 DefaultImporter:
+=======
+guid: d0fc05f0801dadf45bef5484ab20bef6
+NativeFormatImporter:
+>>>>>>> 66ab2c8a4b703fa3c6b91be4a9ed2db6b723dad9:Quaranteam/Assets/Menu/animation/AnimPause/Settings_Main/PauseLogo.anim.meta
   externalObjects: {}
+  mainObjectFileID: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
