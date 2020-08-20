@@ -118,12 +118,12 @@ public class MainMenu : MonoBehaviour
 
     public void levels()
     {
-        nivel = 4;
+        nivel = 6;
     }
 
     public void infinity()
     {
-        nivel = 8;
+        nivel = 11;
     }
 
     public void starJ2()
