@@ -16,7 +16,13 @@ EditorBuildSettings:
     guid: 1ae1bab6a813cd642b7e2ae1c3f2c3d9
   - enabled: 1
     path: Assets/J1/Sceness/G1Level3.unity
+    guid: 88f1c1a13003c95429f10d8e93c75b49
+  - enabled: 1
+    path: Assets/J1/Sceness/G1Level4.unity
     guid: 6f11f04718beafa4b874e2f6be06c9e5
+  - enabled: 1
+    path: Assets/J1/Sceness/G1Level5.unity
+    guid: c5453f3eb98d1334d80c133b379f2c27
   - enabled: 0
     path: Assets/J1/Sceness/J1.1.unity
     guid: 6612d368fb149f049a0de25bd3f628c0

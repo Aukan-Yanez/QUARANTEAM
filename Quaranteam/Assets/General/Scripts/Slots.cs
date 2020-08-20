@@ -11,7 +11,7 @@ public class Slots : MonoBehaviour
     [Tooltip("Iterative: inicia solo con el primer elemento de la lista activado. Luego va descontando el objeto actual si este muere y activando el siguiente según el orden en la lista." +
              "Linear: inicia con todos los elementos de la lista activados. Luego va descontando todos los objetos que esten muertos")]
     public Mode disposeMode = Mode.Iterative;
-    public Rigidbody2D[] slots;
+    private GameObject[] slots = new GameObject[10];
 
     public GameObject vida1;
     public GameObject vida2;
@@ -23,13 +23,25 @@ public class Slots : MonoBehaviour
     
 
     private int indiceObjective = 0;
+
+    public GameObject[] projectilePrefabs;
+    public Transform initPos;
+ 
+    private int lifeCount = 3;
+
+    public bool followCam = true;
+
     void Start()
-    {       
-        setUp();
-        if (objectsCounter != null)
+    {
+        //setUp();
+        /*if (objectsCounter != null)
         {
             objectsCounter.text = message + slots.Length.ToString();
-        }
+        }*/
+
+        
+        slots = new GameObject[lifeCount];
+
         int actCharacter = PlayerPrefs.GetInt("character");
         if(actCharacter == 0)
         {
@@ -50,6 +62,8 @@ public class Slots : MonoBehaviour
             vida3.GetComponent<Image>().sprite = pikachu;
         }
 
+        initiateCharacter();
+
     }
 
     // Update is called once per frame
@@ -58,17 +72,46 @@ public class Slots : MonoBehaviour
         iterativeMode();
     }
 
-    private void mode()
+
+    private void initiateCharacter()
     {
-        if(disposeMode == Mode.Iterative)
+        if (projectilePrefabs.Length > 0 && initPos != null)
         {
-            iterativeMode();
-        }
-        else
-        {
-            linearMode();
+            if (PlayerPrefs.HasKey("character") == false)
+            {
+                PlayerPrefs.SetInt("character", 0);
+            }
+            else
+            {
+                GameObject instancia = projectilePrefabs[PlayerPrefs.GetInt("character")];
+                
+                for(int i=0; i<lifeCount; i++)
+                {
+                    Debug.Log("Guardando instancias");
+                    GameObject i1 = Instantiate(instancia, initPos.position, initPos.rotation);
+                    if (i!=0)
+                    {
+                        i1.SetActive(false);
+                        slots[i] = i1;
+                        if (followCam)
+                        {
+                            GameObject.FindObjectOfType<CameraManager>().focusOnList[i+1] = i1.transform;
+                        }
+                    }
+                    else
+                    {
+                        slots[i] = i1;
+                        if (followCam)
+                        {
+                            GameObject.FindObjectOfType<CameraManager>().focusOnList[i+1] = i1.transform;
+                        }
+                    }
+                }
+            }
         }
     }
+
+   
 
     private void iterativeMode()
     {
@@ -81,11 +124,12 @@ public class Slots : MonoBehaviour
                 if (indiceObjective < slots.Length)//si el indice esta en el rango de la lista
                 {
                     //Activa el siguiente proyectil
+                    Debug.Log("Activando el siguiente");
                     slots[indiceObjective].gameObject.SetActive(true);
                 }
                 if (objectsCounter != null)
                 {
-                    objectsCounter.text = message + (slots.Length - indiceObjective).ToString();
+                    //objectsCounter.text = message + (slots.Length - indiceObjective).ToString();
                     int vida = slots.Length - indiceObjective;
                     if(vida == 2)
                     {
@@ -107,10 +151,22 @@ public class Slots : MonoBehaviour
         }
     }
 
+    public int getVidas()
+    {
+        return slots.Length - indiceObjective;
+    }
+    public GameObject[] getSlots()
+    {
+        return this.slots;
+    }
+
+
+    /*
+    #region Old
     private void linearMode()
     {
         indiceObjective = 0;
-        foreach (Rigidbody2D rb in slots )
+        foreach (GameObject rb in slots )
         {
             //Si el objeto actual esta desactivado
             if (!rb.gameObject.activeSelf)
@@ -156,5 +212,18 @@ public class Slots : MonoBehaviour
 
     }
 
+    private void mode()
+    {
+        if (disposeMode == Mode.Iterative)
+        {
+            iterativeMode();
+        }
+        else
+        {
+            linearMode();
+        }
+    }
+    #endregion
 
+    ¨*/
 }

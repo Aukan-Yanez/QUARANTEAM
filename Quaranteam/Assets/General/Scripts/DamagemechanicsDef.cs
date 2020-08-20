@@ -11,7 +11,8 @@ public class DamagemechanicsDef : MonoBehaviour
     #region Atributos públicos
     public DmComponents components;
     public DmProperties properties;
-    
+    public Animator animator;
+
     [Header("Mask of the items to check")]
     public LayerMask layerMask;
     #endregion
@@ -34,10 +35,10 @@ public class DamagemechanicsDef : MonoBehaviour
 
     private void Start()
     {
-        properties.seconds = 1;
+        //properties.seconds = 1;
         if (components.deathAnimator==null)
         {
-            components.deathAnimator = gameObject.GetComponent<Animator>();
+            //components.deathAnimator = gameObject.GetComponent<Animator>();
         }
         if (components.objectRigidbody2D != null)
         {
@@ -129,11 +130,12 @@ public class DamagemechanicsDef : MonoBehaviour
             }
             else
             {
+                Debug.Log("Azulito");
                 components.objectRigidbody2D.freezeRotation = true;
                 components.objectRigidbody2D.velocity = Vector3.zero;
                 components.objectRigidbody2D.gravityScale = 0;
-                GameObject.Find(components.objectRigidbody2D.name).GetComponent<SpriteRenderer>().color = Color.cyan;
-                //objectRigidbody2D.isKinematic = true;
+                gameObject.GetComponent<SpriteRenderer>().color = Color.cyan;
+                components.objectRigidbody2D.isKinematic = true;
             }
             icep.freezingTime -= 1;
             properties.health -= icep.damage;
@@ -223,19 +225,61 @@ public class DamagemechanicsDef : MonoBehaviour
             {
                 deathAnimation();
                 animated = true;
-                StartCoroutine(WaitForDeath(properties.seconds));
             }
         }
     }
     private void deathAnimation()
     {
-        components.deathAnimator.SetTrigger(typeOfDamageReceived);
+        //components.deathAnimator.SetTrigger(typeOfDamageReceived);
+        if (typeOfDamageReceived == "Burned")
+        {
+            if(animator != null)
+            {
+                properties.seconds = 2;
+                animator.Play("red");
+            }
+            StartCoroutine(WaitForDeath(properties.seconds));
+        }
+        else
+        {
+            if (typeOfDamageReceived == "Electric")
+            {
+                if (animator != null)
+                {
+                    animator.Play("Thunder");
+                }
+                StartCoroutine(WaitForDeath(properties.seconds));
+            }
+            else
+            {
+                if (typeOfDamageReceived == "Frozen")
+                {
+                    if(animator != null)
+                    {
+                        animator.Play("blue");
+                    }
+                    StartCoroutine(WaitForDeath(properties.seconds));
+                }
+                else
+                {
+                    gameObject.SetActive(false);
+                }
+            }
+        }
+            
+        
     }
     IEnumerator WaitForDeath(int pSeconds)
     {
         yield return new WaitForSeconds(pSeconds);
         gameObject.SetActive(false);
     }
+
+    IEnumerator WaitForColor(int pSeconds)
+    {
+        yield return new WaitForSeconds(pSeconds);
+    }
+
     private void giveScore()
     {
         if (properties.givePoints && !gaveAPoint)

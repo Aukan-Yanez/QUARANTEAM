@@ -16,6 +16,8 @@ public class Nextlevel : MonoBehaviour
     public GameObject derrota;
     public ProjectileTwo projectile;
 
+    private bool perder = false;
+
     //public string nextSceneName = "J1.2";
     
     [Range(0, 200)]
@@ -34,11 +36,9 @@ public class Nextlevel : MonoBehaviour
     void Update()
     {
         checkScore();
-        if (existsLevel && canChangeLevel)
-        {
-            loadScene();
-        }
-        checkForVictory();
+        loadScene();
+        
+        //checkForVictory();
     }
 
     private void checkForVictory()
@@ -97,12 +97,39 @@ public class Nextlevel : MonoBehaviour
 
     private void loadScene()
     {
-        delayTime -= 1;
-        if (delayTime<=0)
-        {
-            existsLevel = false;
-            SceneManager.LoadScene(nextSceneIndex);
-        }
+        existsLevel = false;
+        LW();
     }
+
+    private void LW()
+    {
+        Slots s = GameObject.FindObjectOfType<Slots>();
+        if(s.getVidas() == 0 && score.getScore() < pointsToWin)
+        {
+            StartCoroutine("animNextLevelLose");
+        }
+        if (score.getScore() >= pointsToWin)
+        {
+            StartCoroutine("animNextLevelWin");
+        }
+        
+    }
+
+    IEnumerator animNextLevelLose()
+    {
+        derrota.SetActive(true);
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene(0);
+        derrota.SetActive(false);
+    }
+    IEnumerator animNextLevelWin()
+    {
+        victoria.SetActive(true);
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene(nextSceneIndex);
+        victoria.SetActive(false);
+    }
+
+
 
 }

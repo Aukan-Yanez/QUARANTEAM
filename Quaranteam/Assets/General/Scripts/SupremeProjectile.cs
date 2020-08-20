@@ -102,11 +102,11 @@ public class SupremeProjectile : MonoBehaviour
         {
             if (utils.getTouchedElements("DamagemechanicsDef", this.gameObject).Length > 0)
             {
-                components.animator.SetBool(projectile.animationState(), true);
+                //components.animator.SetBool(projectile.animationState(), true);
             }
             else
             {
-                components.animator.SetBool(projectile.animationState(), false);
+                //components.animator.SetBool(projectile.animationState(), false);
             }
         }
     }
@@ -217,7 +217,7 @@ public class SupremeProjectile : MonoBehaviour
             dotList = new GameObject[properties.projectionPointsNumber];
             for (int i = 0; i < properties.projectionPointsNumber; i++)
             {
-                dotList[i] = Instantiate(properties.dot, components.transform, false);
+                dotList[i] = Instantiate(properties.dot,components.transform.position,components.transform.rotation);
             }
         }
         
@@ -268,6 +268,7 @@ public class SupremeProjectile : MonoBehaviour
     {
         if (!ifItsDisconnected() && !nearTheHook()) //Si a+un está conectado el proyectil y lo arrastro lo suficiente
         {
+
             showTrajectory();
             wasDragged = true;
         }
@@ -361,17 +362,24 @@ public class SupremeProjectile : MonoBehaviour
     }
     private void hideTrajectory()
     {
-        for (int i = 0; i < dotList.Length; i++)
+        if (dotList != null)
         {
-            dotList[i].gameObject.GetComponent<SpriteRenderer>().enabled=false;
+            for (int i = 0; i < dotList.Length; i++)
+            {
+                dotList[i].gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            }
         }
     }
     private void deleteTrajectory()
     {
-        for (int i = 0; i < dotList.Length; i++)
+        if (dotList != null)
         {
-            Destroy(dotList[i]);
+            for (int i = 0; i < dotList.Length; i++)
+            {
+                Destroy(dotList[i]);
+            }
         }
+            
     }
     #endregion
 
@@ -983,8 +991,10 @@ public class Pegaloco : ProjectileBehavior
 
     private void rebota()
     {
+        //Si se hace click mientras va en el aire
         if (Input.GetMouseButtonDown(0) && !fijado && !ownElastic.enabled)
         {
+            Debug.Log("Pegandose a lo loco :$");
             thisGameObject.GetComponent<TrailRenderer>().enabled = false;
             ownElastic.enabled = true;
             ownElastic.frequency = frequency;
@@ -996,6 +1006,7 @@ public class Pegaloco : ProjectileBehavior
             ownHook.bodyType = RigidbodyType2D.Static;
             fijado = true;
         }
+        //Mientras esta en el aire
         if(!fijado && !ownElastic.enabled)
         {
             ownHook.bodyType=RigidbodyType2D.Dynamic;
@@ -1003,6 +1014,7 @@ public class Pegaloco : ProjectileBehavior
             ownElastic.anchor = Vector2.zero;
             ownElastic.connectedAnchor = Vector2.zero;
         }
+        //Si esta pegado al hacer click
         if (fijado)
         {
             lifeTime -= 1.5f;

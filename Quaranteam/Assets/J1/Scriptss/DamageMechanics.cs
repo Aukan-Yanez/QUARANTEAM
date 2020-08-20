@@ -67,6 +67,17 @@ public class DamageMechanics : MonoBehaviour
     private Spin spin;
     private Kirby kirby;
 
+
+    public Animator fireAnim;
+    public Animator iceAnim;
+    public Animator thunderAnim;
+
+
+
+
+
+
+
     private void Start()
     {
         if(objectRigidbody2D!= null)
@@ -196,7 +207,7 @@ public class DamageMechanics : MonoBehaviour
             }
         }
         health -= spinDamage;
-        Debug.Log("Me Girann!..");
+        //Debug.Log("Me Girann!..");
     }
 
 
@@ -258,9 +269,20 @@ public class DamageMechanics : MonoBehaviour
     {
         if(health <= 0)
         {
-            GameObject.Find(objectRigidbody2D.name).GetComponent<SpriteRenderer>().enabled = false;
+            //GameObject.Find(objectRigidbody2D.name).GetComponent<SpriteRenderer>().enabled = false;
             objectCollider2D.enabled = false;
+            if (burnable && health > -1 && fireAnim != null)
+            {
+                
+            }
+            if (explode && health > -1)
+            {
 
+            }
+            if (freezable && health > -1)
+            {
+                
+            }
             giveScore();
         }
     }
